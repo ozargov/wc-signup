@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WC SIGNUP</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg:           #0a0a0a;
+    --surface:      #161616;
+    --surface-2:    #1f1f1f;
+    --border:       #2a2a2a;
+    --border-2:     #3a3a3a;
+    --text:         #f5f5f5;
+    --text-2:       #a0a0a0;
+    --text-3:       #707070;
+    --accent:       #ff6b00;
+    --accent-hi:    #ff8c33;
+    --green:        #22c55e;  --green-bg:  #0f2d18;
+    --amber:        #fbbf24;  --amber-bg:  #2d2009;
+    --red:          #ef4444;  --red-bg:    #2d0e0e;
+    --blue:         #38bdf8;  --blue-bg:   #0a2235;
+    --gray-bg:      #1a1a1a;  --gray:      #707070;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.4;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 6rem; }
+
+  /* ---- Header ---- */
+  .hero {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 36px; font-weight: 400;
+    letter-spacing: 0.04em;
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .hero h1 .accent { color: var(--accent); }
+  .hero .sub {
+    font-size: 12px; color: var(--text-2);
+    text-transform: uppercase; letter-spacing: 0.18em;
+    margin-top: 8px;
+  }
+
+  /* ---- Tabs ---- */
+  .tabs { display: flex; gap: 4px; margin-bottom: 1rem; border-bottom: 1px solid var(--border); }
+  .tab {
+    background: transparent; border: none; color: var(--text-2);
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 18px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 12px 18px; cursor: pointer; border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+
+  /* ---- Inputs / buttons ---- */
+  button, input {
+    font: inherit; color: var(--text); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 10px 14px;
+  }
+  button { cursor: pointer; transition: border-color .12s, background .12s; }
+  button:hover  { border-color: var(--border-2); }
+  button:active { background: var(--surface-2); }
+  button:disabled { color: var(--text-3); cursor: not-allowed; }
+  button.primary {
+    background: var(--accent); color: #0a0a0a; border-color: var(--accent);
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 16px;
+  }
+  button.primary:hover:not(:disabled) { background: var(--accent-hi); border-color: var(--accent-hi); }
+  button.primary:disabled { background: #4a3621; border-color: #4a3621; color: #888; }
+  button.ghost { background: transparent; }
+  button.danger {
+    background: transparent; color: var(--red); border-color: var(--red-bg);
+  }
+  button.danger:hover { background: var(--red-bg); }
+  input[type="email"], input[type="password"], input[type="date"] {
+    width: 100%; background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); padding: 10px 12px;
+  }
+  input::placeholder { color: var(--text-3); }
+  input:focus { outline: none; border-color: var(--accent); }
+
+  .row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .grow { flex: 1; min-width: 0; }
+
+  /* ---- Status pills ---- */
+  .pill {
+    display: inline-block; padding: 3px 9px; border-radius: 2px;
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+  }
+  .pill-green { background: var(--green-bg); color: var(--green); }
+  .pill-amber { background: var(--amber-bg); color: var(--amber); }
+  .pill-red   { background: var(--red-bg);   color: var(--red);   }
+  .pill-blue  { background: var(--blue-bg);  color: var(--blue);  }
+  .pill-gray  { background: var(--gray-bg);  color: var(--gray);  }
+
+  /* ---- Class cards ---- */
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 14px 16px; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 14px;
+    border-left: 3px solid var(--border);
+  }
+  .card:hover { border-color: var(--border-2); border-left-color: var(--accent); }
+  .card.disabled { opacity: 0.45; }
+  .card.disabled:hover { border-left-color: var(--border); }
+  .card label { flex: 1; display: flex; align-items: center; gap: 14px; cursor: pointer; min-width: 0; }
+  .card input[type="checkbox"] {
+    width: 18px; height: 18px; flex-shrink: 0; cursor: pointer;
+    accent-color: var(--accent);
+  }
+  .card .time {
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 28px; letter-spacing: 0.02em; min-width: 72px; line-height: 1;
+  }
+  .card .body { flex: 1; min-width: 0; }
+  .card .cat {
+    font-size: 15px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  .card .meta { font-size: 12px; color: var(--text-2); margin-top: 4px; }
+
+  /* ---- Panels ---- */
+  .panel { background: var(--surface); border: 1px solid var(--border); padding: 12px 14px; font-size: 13px; color: var(--text-2); margin: 10px 0; }
+  .err {
+    background: var(--red-bg); color: #ffd1d1; border-left: 3px solid var(--red);
+    padding: 12px 14px; font-size: 13px; margin: 10px 0;
+    white-space: pre-wrap; word-break: break-word;
+  }
+  .empty { text-align: center; color: var(--text-3); padding: 3rem 1rem; font-size: 14px; }
+  .empty .big {
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 22px; color: var(--text-2); letter-spacing: 0.06em;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+
+  /* ---- Weekend banner ---- */
+  .weekend-banner {
+    background: var(--blue-bg); color: var(--blue);
+    border-left: 3px solid var(--blue);
+    padding: 10px 14px; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  /* ---- Sticky submit ---- */
+  .sticky {
+    position: sticky; bottom: 0; background: linear-gradient(to top, var(--bg) 60%, transparent);
+    padding: 1rem 0 0; margin-top: 1.25rem;
+  }
+  .sticky-row { display: flex; align-items: center; gap: 12px; }
+  .sel-count {
+    flex: 1; font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 18px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-2);
+  }
+  .sel-count .num { color: var(--accent); }
+
+  /* ---- Modal ---- */
+  .modal-bg {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+    display: none; align-items: flex-start; justify-content: center;
+    padding: 2rem 1rem; z-index: 50;
+  }
+  .modal-bg.open { display: flex; }
+  .modal {
+    background: var(--surface-2); border: 1px solid var(--border-2);
+    padding: 1.5rem; max-width: 620px; width: 100%; max-height: 80vh; overflow-y: auto;
+  }
+  .modal h2 {
+    margin: 0 0 1rem; font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 22px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 400;
+  }
+  .cmd-box {
+    background: #0a0a0a; border: 1px solid var(--border);
+    padding: 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 11px; white-space: pre-wrap; word-break: break-all; margin: 6px 0;
+    color: var(--text-2);
+  }
+
+  /* ---- Plan tab specific ---- */
+  .plan-section { margin-bottom: 1.5rem; }
+  .plan-section h3 {
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 16px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-2); margin: 0 0 12px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .plan-section h3 .count { color: var(--accent); margin-left: 6px; }
+  .plan-card {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 14px 16px; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 14px;
+    border-left: 3px solid var(--accent);
+  }
+  .plan-card .body { flex: 1; min-width: 0; }
+  .plan-card .when {
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 18px; letter-spacing: 0.03em; text-transform: uppercase;
+  }
+  .plan-card .what { font-size: 13px; color: var(--text-2); margin-top: 4px; }
+  .plan-card.confirmed { border-left-color: var(--blue); }
+
+  /* ---- Misc ---- */
+  .toast {
+    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
+    background: var(--accent); color: #0a0a0a; padding: 10px 18px;
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    letter-spacing: 0.06em; text-transform: uppercase; font-size: 14px;
+    opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 100;
+  }
+  .toast.show { opacity: 1; }
+  .link {
+    background: none; border: none; padding: 0;
+    color: var(--text-3); cursor: pointer; text-decoration: underline; font-size: 12px;
+  }
+  .link:hover { color: var(--accent); }
+  .nav-btn { min-width: 64px; font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif; text-transform: uppercase; letter-spacing: 0.06em; font-size: 14px; }
+  .small-muted { font-size: 12px; color: var(--text-3); }
+
+  /* ---- Server status banner ---- */
+  .server-banner {
+    border: 1px solid var(--border); padding: 12px 14px; margin: 0 0 1.25rem;
+    background: var(--surface);
+  }
+  .server-banner.up   { border-left: 3px solid var(--green); }
+  .server-banner.down { border-left: 3px solid var(--red);   }
+  .server-banner.unknown { border-left: 3px solid var(--amber); }
+  .sb-row { display: flex; align-items: center; gap: 10px; }
+  .sb-dot {
+    width: 10px; height: 10px; border-radius: 50%; background: var(--text-3);
+    display: inline-block; flex-shrink: 0;
+  }
+  .server-banner.up   .sb-dot { background: var(--green); box-shadow: 0 0 8px rgba(34,197,94,.5); }
+  .server-banner.down .sb-dot { background: var(--red);   box-shadow: 0 0 8px rgba(239,68,68,.5); }
+  .sb-title {
+    font-family: Impact, "Bebas Neue", "Arial Narrow Bold", sans-serif;
+    font-size: 16px; letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 400;
+  }
+  .sb-detail { margin-top: 4px; }
+  code {
+    background: #0a0a0a; padding: 2px 5px; border-radius: 3px;
+    font-family: ui-monospace, monospace; font-size: 12px; color: var(--accent);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>WHITE <span class="accent">CITY</span></h1>
+    <div class="sub">CrossFit class signup</div>
+  </div>
+
+  <div id="server-banner" class="server-banner unknown">
+    <div class="sb-row">
+      <span class="sb-dot" id="sb-dot"></span>
+      <strong id="sb-title" class="sb-title">Checking bot...</strong>
+      <button class="ghost" id="sb-recheck" style="margin-left:auto;">Recheck</button>
+    </div>
+    <div id="sb-detail" class="sb-detail" hidden>
+      <div class="small-muted" style="margin: 6px 0;">Open PowerShell (Win+R, type <code>powershell</code>, Enter), paste this and hit Enter. Leave the window open.</div>
+      <div class="cmd-box" id="sb-cmd"></div>
+      <div class="row" style="margin-top:8px;">
+        <button id="sb-copy">Copy command</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="setup" hidden>
+    <div class="panel">First-time setup. Your HYPR app email + password are saved only in this browser's localStorage.</div>
+    <div class="row"><input id="in-email" type="email"    placeholder="email" autocomplete="email" /></div>
+    <div class="row"><input id="in-pass"  type="password" placeholder="password" autocomplete="current-password" /></div>
+    <div class="row"><button class="primary grow" id="btn-save-creds">Save and load schedule</button></div>
+  </div>
+
+  <div id="main" hidden>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="schedule">Schedule</button>
+      <button class="tab"        data-tab="plan">My plan</button>
+    </div>
+
+    <!-- ===== SCHEDULE TAB ===== -->
+    <div id="tab-schedule">
+      <div class="row">
+        <button class="nav-btn" id="btn-prev" aria-label="Previous day">Prev</button>
+        <strong id="date-label" class="grow" style="text-align:center; font-size:16px; letter-spacing:0.04em; text-transform:uppercase;"></strong>
+        <button class="nav-btn" id="btn-next" aria-label="Next day">Next</button>
+      </div>
+      <div class="row">
+        <input id="in-date" type="date" class="grow" />
+        <button class="nav-btn" id="btn-refresh" aria-label="Refresh schedule">Reload</button>
+      </div>
+
+      <div id="weekend-banner" class="weekend-banner" hidden></div>
+      <div id="status"  class="panel" hidden></div>
+      <div id="error"   class="err"   hidden></div>
+      <div id="classes"></div>
+
+      <div class="sticky">
+        <div class="sticky-row">
+          <div class="sel-count"><span class="num" id="sel-count">0</span> selected</div>
+          <button class="primary" id="btn-submit" disabled>Schedule selected</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PLAN TAB ===== -->
+    <div id="tab-plan" hidden>
+      <div class="row">
+        <button class="nav-btn grow" id="btn-plan-refresh">Reload plan</button>
+      </div>
+
+      <div id="plan-error" class="err" hidden></div>
+
+      <div class="plan-section">
+        <h3>Scheduled <span class="count" id="count-scheduled">0</span></h3>
+        <div class="small-muted" style="margin-bottom:10px;">Future bookings. Your PC wakes and books each class right when its signup window opens (48h for most days; 72h for Sunday &amp; Monday classes).</div>
+        <div id="list-scheduled"></div>
+      </div>
+
+      <div class="plan-section">
+        <h3>Confirmed <span class="count" id="count-confirmed">0</span></h3>
+        <div class="small-muted" style="margin-bottom:10px;">Classes you're already signed up for.</div>
+        <div id="list-confirmed"></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem; text-align: center;">
+      <button class="link" id="link-reset">Clear stored credentials</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-bg" id="modal-bg">
+  <div class="modal">
+    <h2 id="modal-title">Booking results</h2>
+    <div id="modal-body"></div>
+    <div class="row" style="margin-top: 1.25rem; justify-content: flex-end;">
+      <button id="modal-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+  const BASE_URL    = 'https://apiappv2.arboxapp.com/api/v2';
+  const WHITELABEL  = 'HYPR-training';
+  const BOXES_ID    = 59;
+  const LOC_BOX_ID  = 48;
+  const MEMBERSHIP  = 13705578;
+  const PS_SERVER   = 'C:\\Users\\oz.argov\\Documents\\Claude\\Projects\\WC Signup\\server.ps1';
+  const SERVER_URL  = 'http://localhost:8088';
+
+  const $ = id => document.getElementById(id);
+
+  // ---- state ----
+  let date = new Date(); date.setHours(0,0,0,0);
+  const schedCache  = {};
+  const selected    = new Map();
+  let cachedToken   = null;
+  let cachedRefresh = null;
+  let userUbId      = null;  // users_boxes id for current user
+
+  // ---- helpers ----
+  function fmtDate(d) {
+    const y = d.getFullYear();
+    const m = String(d.getMonth()+1).padStart(2,'0');
+    const day = String(d.getDate()).padStart(2,'0');
+    return `${y}-${m}-${day}`;
+  }
+  function fmtDateHuman(d) {
+    return d.toLocaleDateString('en-US', {weekday:'long', month:'short', day:'numeric'});
+  }
+  function fmtDateTimeHuman(d) {
+    return d.toLocaleString('en-US', {weekday:'short', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12: false});
+  }
+  function getCreds()   { try { return JSON.parse(localStorage.getItem('wc_creds') || 'null'); } catch(e) { return null; } }
+  function setCreds(c)  { localStorage.setItem('wc_creds', JSON.stringify(c)); }
+  function clearCreds() { localStorage.removeItem('wc_creds'); cachedToken = null; cachedRefresh = null; userUbId = null; }
+
+  function showSetup() { $('setup').hidden = false; $('main').hidden = true; }
+  function showMain()  { $('setup').hidden = true;  $('main').hidden = false; }
+
+  function setStatus(m) { if (!m) { $('status').hidden = true; return; } $('status').hidden = false; $('status').textContent = m; }
+  function setError(m)  { if (!m) { $('error').hidden = true; return; } $('error').hidden = false; $('error').textContent = m; }
+  function setPlanError(m) { if (!m) { $('plan-error').hidden = true; return; } $('plan-error').hidden = false; $('plan-error').textContent = m; }
+
+  function showToast(m) {
+    const t = $('toast'); t.textContent = m; t.classList.add('show');
+    clearTimeout(t._timer); t._timer = setTimeout(() => t.classList.remove('show'), 1800);
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // ---- Weekend signup-window rules ----
+  // Sunday  (dow=0): opens Thursday same time  → 72h before
+  // Monday  (dow=1): opens Friday   same time  → 72h before
+  // All other days : standard 48h before
+  function signupHoursBefore(dow) {
+    return (dow === 0 || dow === 1) ? 72 : 48;
+  }
+
+  function updateWeekendBanner(d) {
+    const banner = $('weekend-banner');
+    const dow = d.getDay();
+    if (dow === 0) {
+      banner.textContent = '📅 Sunday classes open on Thursday at the same time (72h window)';
+      banner.hidden = false;
+    } else if (dow === 1) {
+      banner.textContent = '📅 Monday classes open on Friday at the same time (72h window)';
+      banner.hidden = false;
+    } else if (dow === 6) {
+      banner.textContent = '🏖 Saturday: gym is off — only evening classes available';
+      banner.hidden = false;
+    } else {
+      banner.hidden = true;
+    }
+  }
+
+  // ---- API: login + schedule ----
+  function baseHeaders(extra) {
+    return Object.assign({
+      'Content-Type':   'application/json',
+      'Accept':         'application/json',
+      'whitelabel':     WHITELABEL,
+      'referername':    'app',
+      'version':        '11'
+    }, extra || {});
+  }
+
+  async function login() {
+    const c = getCreds();
+    if (!c) throw new Error('No credentials saved.');
+    const r = await fetch(BASE_URL + '/user/login', {
+      method:  'POST',
+      headers: baseHeaders(),
+      body:    JSON.stringify({ email: c.email, password: c.password })
+    });
+    if (!r.ok) {
+      let txt = ''; try { txt = await r.text(); } catch(e) {}
+      throw new Error('Login failed (HTTP ' + r.status + '): ' + txt.slice(0,300));
+    }
+    const j = await r.json();
+    const data = (j && j.data) || j || {};
+    if (!data.token) throw new Error('Login returned no token.');
+    cachedToken   = data.token;
+    cachedRefresh = data.refreshToken || data.refresh_token || '';
+  }
+
+  async function authedFetch(url, opts) {
+    if (!cachedToken) await login();
+    const optsAuth = Object.assign({}, opts, {
+      headers: baseHeaders(Object.assign({ accesstoken: cachedToken, refreshtoken: cachedRefresh }, (opts && opts.headers) || {}))
+    });
+    let r = await fetch(url, optsAuth);
+    if (r.status === 401) {
+      await login();
+      optsAuth.headers = baseHeaders(Object.assign({ accesstoken: cachedToken, refreshtoken: cachedRefresh }, (opts && opts.headers) || {}));
+      r = await fetch(url, optsAuth);
+    }
+    return r;
+  }
+
+  async function ensureUserUbId() {
+    if (userUbId) return userUbId;
+    const r = await authedFetch(BASE_URL + '/user/profile');
+    if (!r.ok) throw new Error('profile fetch HTTP ' + r.status);
+    const j = await r.json();
+    const data = (j && j.data) || j;
+    const boxes = data.users_boxes || [];
+    const mine  = boxes.find(b => b.box && b.box.id === BOXES_ID) || boxes[0];
+    if (mine) userUbId = mine.ub_id || mine.id || null;
+    return userUbId;
+  }
+
+  async function fetchScheduleForDate(d) {
+    const dateStr = fmtDate(d);
+    const iso = dateStr + 'T00:00:00.000Z';
+    const r = await authedFetch(BASE_URL + '/schedule/betweenDates', {
+      method: 'POST',
+      body:   JSON.stringify({ from: iso, to: iso, locations_box_id: LOC_BOX_ID, boxes_id: BOXES_ID })
+    });
+    if (!r.ok) {
+      let txt = ''; try { txt = await r.text(); } catch(e) {}
+      throw new Error('Schedule fetch HTTP ' + r.status + ': ' + txt.slice(0,300));
+    }
+    const j = await r.json();
+    return (j && j.data) || [];
+  }
+
+  async function bookNow(scheduleId) {
+    const r = await authedFetch(BASE_URL + '/scheduleUser/insert', {
+      method: 'POST',
+      body:   JSON.stringify({ schedule_id: Number(scheduleId), membership_user_id: MEMBERSHIP, extras: null })
+    });
+    let txt = ''; try { txt = await r.text(); } catch(e) {}
+    if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + txt.slice(0,300));
+    return txt;
+  }
+
+  // ---- Plan tab data ----
+  async function fetchScheduledTasks() {
+    try {
+      const r = await fetch(SERVER_URL + '/scheduled');
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const j = await r.json();
+      return j.tasks || [];
+    } catch (e) {
+      throw new Error('Local server unreachable. Start server.ps1 in PowerShell first. (' + (e.message || e) + ')');
+    }
+  }
+
+  // Pull "upcoming bookings" by sweeping the next 14 days of schedule and
+  // finding classes where my ub_id appears in the booked list.
+  async function fetchUpcomingBookings() {
+    await ensureUserUbId();
+    const start = new Date(); start.setHours(0,0,0,0);
+    const end   = new Date(start.getTime() + 14*24*3600*1000);
+    const fromIso = start.toISOString().slice(0,10) + 'T00:00:00.000Z';
+    const toIso   = end.toISOString().slice(0,10)   + 'T00:00:00.000Z';
+    const r = await authedFetch(BASE_URL + '/schedule/betweenDates', {
+      method: 'POST',
+      body:   JSON.stringify({ from: fromIso, to: toIso, locations_box_id: LOC_BOX_ID, boxes_id: BOXES_ID })
+    });
+    if (!r.ok) throw new Error('schedule fetch HTTP ' + r.status);
+    const j = await r.json();
+    const all = (j && j.data) || [];
+    const mine = [];
+    for (const cls of all) {
+      const list =
+        cls.scheduleUsers ||
+        cls.booked_users ||
+        cls.users_in_box ||
+        [];
+      // user_booked is set by the API specifically for the authenticated user.
+      const found = cls.user_booked != null || cls.is_booked === 1;
+      if (found) mine.push(cls);
+    }
+    return mine;
+  }
+
+  // ---- Plan rendering ----
+  function renderPlan(scheduled, confirmed) {
+    // Filter out tasks that already ran successfully (lastResult === 0). The
+    // book script unregisters itself on success so these are rare leftovers.
+    scheduled = (scheduled || []).filter(t => !(t && t.lastResult === 0));
+
+    $('count-scheduled').textContent = String(scheduled.length);
+    $('count-confirmed').textContent = String(confirmed.length);
+
+    // Scheduled (Windows tasks)
+    const sCont = $('list-scheduled'); sCont.innerHTML = '';
+    if (!scheduled.length) {
+      sCont.innerHTML = '<div class="empty"><div class="big">No future bookings</div><div>Schedule classes from the Schedule tab.</div></div>';
+    } else {
+      scheduled.sort((a,b) => String(a.fireAt).localeCompare(String(b.fireAt)));
+      for (const t of scheduled) {
+        // Parse task name "WC-Signup-YYYY-MM-DD-HH-MM" for the class moment.
+        let classWhen = '';
+        const m = /WC-Signup-(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{2})$/.exec(t.name || '');
+        if (m) {
+          const d = new Date(m[1] + 'T' + m[2] + ':' + m[3] + ':00');
+          classWhen = fmtDateTimeHuman(d);
+        }
+        const fireAt = t.fireAt ? fmtDateTimeHuman(new Date(t.fireAt)) : '';
+        const div = document.createElement('div');
+        div.className = 'plan-card';
+        div.innerHTML =
+          '<div class="body">' +
+            '<div class="when">' + escapeHtml(classWhen || t.name) + '</div>' +
+            '<div class="what">' +
+              'Fires ' + escapeHtml(fireAt) +
+              (t.state ? ' &middot; ' + escapeHtml(t.state) : '') +
+            '</div>' +
+          '</div>' +
+          '<button class="danger" data-cancel-task="' + escapeHtml(t.name) + '">Cancel</button>';
+        sCont.appendChild(div);
+      }
+    }
+
+    // Confirmed (already booked)
+    const cCont = $('list-confirmed'); cCont.innerHTML = '';
+    if (!confirmed.length) {
+      cCont.innerHTML = '<div class="empty"><div class="big">No confirmed bookings</div><div>Once a scheduled task fires successfully, it shows up here.</div></div>';
+    } else {
+      confirmed.sort((a,b) => (a.date + a.time).localeCompare(b.date + b.time));
+      for (const c of confirmed) {
+        const t = String(c.time || '').slice(0,5);
+        const dStr = c.date || '';
+        let when = dStr + ' ' + t;
+        try { when = fmtDateTimeHuman(new Date(dStr + 'T' + t + ':00')); } catch(e) {}
+        const cat   = (c.box_categories && c.box_categories.name) || '(no category)';
+        const coach = (c.coach && c.coach.full_name) || '';
+        const div = document.createElement('div');
+        div.className = 'plan-card confirmed';
+        div.innerHTML =
+          '<div class="body">' +
+            '<div class="when">' + escapeHtml(when) + ' &middot; ' + escapeHtml(cat) + '</div>' +
+            '<div class="what">' + escapeHtml(coach) + '</div>' +
+          '</div>';
+        cCont.appendChild(div);
+      }
+    }
+
+    // Wire up cancel buttons
+    sCont.querySelectorAll('button[data-cancel-task]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const name = btn.getAttribute('data-cancel-task');
+        if (!confirm('Cancel scheduled booking ' + name + '?')) return;
+        btn.disabled = true; btn.textContent = 'Cancelling...';
+        try {
+          const r = await fetch(SERVER_URL + '/cancel-scheduled', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify({ name })
+          });
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          const j = await r.json();
+          if (!j.ok) throw new Error(j.error || 'unknown');
+          showToast('Cancelled');
+          await loadPlan();
+        } catch (e) {
+          alert('Could not cancel: ' + (e.message || e));
+          btn.disabled = false; btn.textContent = 'Cancel';
+        }
+      });
+    });
+  }
+
+  async function loadPlan() {
+    setPlanError(null);
+    $('list-scheduled').innerHTML = '<div class="small-muted">Loading scheduled...</div>';
+    $('list-confirmed').innerHTML = '<div class="small-muted">Loading confirmed...</div>';
+    let scheduled = [];
+    let confirmed = [];
+    try { scheduled = await fetchScheduledTasks(); }
+    catch (e) { setPlanError(String((e && e.message) || e)); }
+    try { confirmed = await fetchUpcomingBookings(); }
+    catch (e) {
+      const prior = $('plan-error').textContent;
+      setPlanError((prior ? prior + '\n' : '') + 'Could not load confirmed: ' + String((e && e.message) || e));
+    }
+    renderPlan(scheduled, confirmed);
+  }
+
+  // ---- Schedule rendering ----
+  function classStartLocal(cls, dateKey) {
+    const t = String(cls.time || '').slice(0,5);
+    const [hh, mm] = t.split(':').map(Number);
+    const d = new Date(dateKey + 'T00:00:00');
+    d.setHours(hh, mm, 0, 0);
+    return d;
+  }
+
+  function statusFor(cls, dateKey) {
+    const start = classStartLocal(cls, dateKey);
+    // Weekend special rules:
+    //   Sunday  (dow=0) → opens Thursday same time  (72h before)
+    //   Monday  (dow=1) → opens Friday   same time  (72h before)
+    //   All other days  → standard 48h window
+    const opens = new Date(start.getTime() - signupHoursBefore(start.getDay()) * 3600*1000);
+    const now   = new Date();
+    const free  = Number(cls.free);
+    // user_booked is set by the API specifically for the authenticated user.
+    // Non-null = this user is booked. Null = not booked.
+    const booked = cls.user_booked != null || cls.is_booked === 1;
+    if (booked) return { key:'booked', label:'Booked', cls:'pill-blue' };
+    if (start < now) return { key:'past', label:'Past', cls:'pill-gray' };
+    if (free === 0) return { key:'full', label:'Full', cls:'pill-red' };
+    if (now >= opens) return { key:'open', label:'Open now', cls:'pill-green' };
+    const mins = Math.round((opens - now) / 60000);
+    const hrs  = Math.round(mins / 60);
+    let label;
+    if (hrs >= 24) label = 'Opens ' + opens.toLocaleString('en-US', {weekday:'short', hour:'2-digit', minute:'2-digit', hour12: false});
+    else if (hrs >= 1) label = 'Opens in ' + hrs + 'h';
+    else label = 'Opens in ' + mins + 'm';
+    return { key:'future', label, cls:'pill-amber' };
+  }
+
+  function render() {
+    $('date-label').textContent = fmtDateHuman(date);
+    $('in-date').value = fmtDate(date);
+    updateWeekendBanner(date);
+    const key = fmtDate(date);
+    const classes = schedCache[key];
+    const container = $('classes');
+    container.innerHTML = '';
+
+    if (!classes) {
+      container.innerHTML = '<div class="empty">Loading...</div>';
+      return;
+    }
+    if (classes.length === 0) {
+      container.innerHTML = '<div class="empty"><div class="big">Rest day</div><div>No classes on this day.</div></div>';
+      return;
+    }
+
+    classes.sort((a,b) => String(a.time).localeCompare(String(b.time)));
+
+    for (const cls of classes) {
+      const st = statusFor(cls, key);
+      const div = document.createElement('div');
+      const disabled = (st.key === 'past' || st.key === 'full' || st.key === 'booked');
+      div.className = 'card' + (disabled ? ' disabled' : '');
+      const time  = String(cls.time || '').slice(0,5);
+      const cat   = (cls.box_categories && cls.box_categories.name) || '(no category)';
+      const coach = (cls.coach && cls.coach.full_name) || '';
+      const free  = (cls.free != null) ? (cls.free + ' free') : '';
+      const meta  = coach + (coach && free ? ' &middot; ' : '') + free;
+      const checked = selected.has(cls.id) ? 'checked' : '';
+
+      div.innerHTML =
+        '<label>' +
+          '<input type="checkbox" data-id="' + cls.id + '" ' + (disabled ? 'disabled' : '') + ' ' + checked + ' />' +
+          '<div class="time">' + escapeHtml(time) + '</div>' +
+          '<div class="body">' +
+            '<div class="cat">' + escapeHtml(cat) + '</div>' +
+            '<div class="meta">' + meta + '</div>' +
+          '</div>' +
+        '</label>' +
+        '<span class="pill ' + st.cls + '">' + escapeHtml(st.label) + '</span>';
+
+      const cb = div.querySelector('input');
+      if (cb) {
+        cb.addEventListener('change', () => {
+          if (cb.checked) selected.set(cls.id, Object.assign({}, cls, { _dateKey: key, _status: st }));
+          else            selected.delete(cls.id);
+          updateSubmit();
+        });
+      }
+      container.appendChild(div);
+    }
+  }
+
+  function updateSubmit() {
+    $('sel-count').textContent = selected.size;
+    $('btn-submit').disabled = selected.size === 0;
+  }
+
+  async function loadDate() {
+    setError(null);
+    const key = fmtDate(date);
+    if (schedCache[key]) { render(); return; }
+    setStatus('Fetching schedule for ' + key + '...');
+    render();
+    try {
+      // Make sure we know our ub id so we can flag "Booked" rows.
+      try { await ensureUserUbId(); } catch (e) {}
+      const classes = await fetchScheduleForDate(date);
+      schedCache[key] = classes;
+      setStatus(null);
+      render();
+    } catch (e) {
+      setStatus(null);
+      setError(String((e && e.message) || e));
+      render();
+    }
+  }
+
+  // ---- Submit handler ----
+  async function onSubmit() {
+    const opens   = [];
+    const futures = [];
+    for (const [, c] of selected) {
+      if (c._status.key === 'open')   opens.push(c);
+      else if (c._status.key === 'future') futures.push(c);
+    }
+
+    const results = [];
+    for (const c of opens) {
+      const label = c._dateKey + ' ' + String(c.time).slice(0,5) + ' - ' + ((c.box_categories && c.box_categories.name) || '');
+      try {
+        await bookNow(c.id);
+        results.push({ kind: 'booked', label, msg: 'OK' });
+      } catch (e) {
+        results.push({ kind: 'failed', label, msg: String((e && e.message) || e) });
+      }
+    }
+
+    const scheduleResults = [];
+    for (const c of futures) {
+      const t   = String(c.time).slice(0,5);
+      const cat = (c.box_categories && c.box_categories.name) || '';
+      const label = c._dateKey + ' ' + t + ' - ' + cat;
+      try {
+        const r = await fetch(SERVER_URL + '/schedule', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ classDate: c._dateKey, classTime: t, categoryFilter: cat })
+        });
+        if (!r.ok) throw new Error('Server returned HTTP ' + r.status);
+        const j = await r.json();
+        if (j.ok) scheduleResults.push({ kind: 'scheduled', label, output: j.output });
+        else      scheduleResults.push({ kind: 'failed',    label, output: j.output || j.error || 'unknown error' });
+      } catch (e) {
+        scheduleResults.push({ kind: 'server-down', label, output: String((e && e.message) || e) });
+      }
+    }
+
+    let body = '';
+    if (results.length) {
+      body += '<h3 style="margin:.25rem 0 .5rem; font-family:Impact,sans-serif; font-size:16px; letter-spacing:.06em; text-transform:uppercase; color: var(--text-2);">Booked just now</h3>';
+      for (const r of results) {
+        const ok = r.kind === 'booked';
+        const color = ok ? 'var(--green)' : 'var(--red)';
+        const bg    = ok ? 'var(--green-bg)' : 'var(--red-bg)';
+        body += '<div style="background:' + bg + '; color:' + color + '; padding:10px 12px; border-left: 3px solid ' + color + '; margin-bottom:6px; font-size:13px;">'
+              + (ok ? 'OK: ' : 'FAILED: ') + escapeHtml(r.label)
+              + (!ok ? '<div class="small-muted" style="margin-top:4px;">' + escapeHtml(r.msg) + '</div>' : '')
+              + '</div>';
+      }
+    }
+    if (scheduleResults.length) {
+      body += '<h3 style="margin:1rem 0 .5rem; font-family:Impact,sans-serif; font-size:16px; letter-spacing:.06em; text-transform:uppercase; color: var(--text-2);">Scheduled</h3>';
+      const serverDown = scheduleResults.some(r => r.kind === 'server-down');
+      if (serverDown) {
+        body += '<div style="background: var(--red-bg); color: #ffd1d1; border-left: 3px solid var(--red); padding:10px 12px; font-size:13px; margin-bottom:10px;">' +
+                'Local server not running. In PowerShell run:<br>' +
+                '<div class="cmd-box">powershell -ExecutionPolicy Bypass -NoProfile -File "' + PS_SERVER + '"</div>' +
+                '</div>';
+      }
+      for (const r of scheduleResults) {
+        const ok = (r.kind === 'scheduled');
+        const color = ok ? 'var(--green)' : 'var(--red)';
+        const bg    = ok ? 'var(--green-bg)' : 'var(--red-bg)';
+        body += '<div style="background:' + bg + '; color:' + color + '; padding:10px 12px; border-left: 3px solid ' + color + '; margin-bottom:6px; font-size:13px;">'
+              + (ok ? 'SCHEDULED: ' : (r.kind === 'server-down' ? 'SKIPPED: ' : 'FAILED: ')) + escapeHtml(r.label);
+        if (!ok) {
+          body += '<details style="margin-top:6px;"><summary class="small-muted" style="cursor:pointer;">Show output</summary>'
+               +  '<div class="cmd-box" style="margin-top:4px;">' + escapeHtml(r.output) + '</div></details>';
+        }
+        body += '</div>';
+      }
+    }
+    if (!results.length && !scheduleResults.length) body = '<div class="small-muted">No selections.</div>';
+
+    $('modal-body').innerHTML = body;
+    $('modal-bg').classList.add('open');
+
+    // Clear selection and refresh the affected day so booked classes flip status.
+    const datesToRefresh = new Set();
+    for (const r of results) datesToRefresh.add(r.label.split(' ')[0]);
+    selected.clear();
+    updateSubmit();
+    for (const d of datesToRefresh) delete schedCache[d];
+    if (datesToRefresh.has(fmtDate(date))) loadDate(); else render();
+  }
+
+  // ---- Tab switching ----
+  function showTab(name) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-tab') === name));
+    $('tab-schedule').hidden = (name !== 'schedule');
+    $('tab-plan').hidden     = (name !== 'plan');
+    if (name === 'plan') loadPlan();
+  }
+
+  // ---- Server status banner ----
+  const SERVER_START_CMD = 'powershell -ExecutionPolicy Bypass -NoProfile -File "' + PS_SERVER + '"';
+
+  async function checkServer() {
+    const banner = $('server-banner');
+    const title  = $('sb-title');
+    const detail = $('sb-detail');
+    const cmd    = $('sb-cmd');
+
+    banner.classList.remove('up','down'); banner.classList.add('unknown');
+    title.textContent = 'Checking bot...';
+    detail.hidden = true;
+
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 3000);
+      const r = await fetch(SERVER_URL + '/ping', { signal: ctrl.signal });
+      clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      banner.classList.remove('unknown','down'); banner.classList.add('up');
+      title.textContent = 'Bot running - ready to schedule';
+      detail.hidden = true;
+    } catch (e) {
+      banner.classList.remove('unknown','up'); banner.classList.add('down');
+      title.textContent = 'Bot is not running - start it to schedule classes';
+      cmd.textContent = SERVER_START_CMD;
+      detail.hidden = false;
+    }
+  }
+
+  // ---- Bootstrap ----
+  function init() {
+    if (!getCreds()) showSetup();
+    else { showMain(); loadDate(); }
+    checkServer();
+    setInterval(checkServer, 15000);
+  }
+  $('btn-save-creds').addEventListener('click', () => {
+    const e = $('in-email').value.trim();
+    const p = $('in-pass').value;
+    if (!e || !p) { showToast('Enter email and password'); return; }
+    setCreds({ email: e, password: p });
+    showMain(); loadDate();
+  });
+  $('btn-prev').addEventListener('click', () => { date.setDate(date.getDate()-1); loadDate(); });
+  $('btn-next').addEventListener('click', () => { date.setDate(date.getDate()+1); loadDate(); });
+  $('in-date').addEventListener('change', e => { if (e.target.value) { date = new Date(e.target.value + 'T00:00:00'); loadDate(); } });
+  $('btn-refresh').addEventListener('click', () => { delete schedCache[fmtDate(date)]; cachedToken = null; loadDate(); });
+  $('btn-submit').addEventListener('click', onSubmit);
+  $('btn-plan-refresh').addEventListener('click', loadPlan);
+  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => showTab(t.getAttribute('data-tab'))));
+  $('link-reset').addEventListener('click', () => { if (!confirm('Clear stored email + password?')) return; clearCreds(); showSetup(); });
+  $('modal-close').addEventListener('click', () => $('modal-bg').classList.remove('open'));
+  $('modal-bg').addEventListener('click', e => { if (e.target.id === 'modal-bg') $('modal-bg').classList.remove('open'); });
+
+  $('sb-recheck').addEventListener('click', checkServer);
+  $('sb-copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(SERVER_START_CMD); showToast('Copied'); }
+    catch(e) {
+      // Fallback: select the text in the box so user can Ctrl+C.
+      const range = document.createRange();
+      range.selectNodeContents($('sb-cmd'));
+      const sel = window.getSelection();
+      sel.removeAllRanges(); sel.addRange(range);
+      showToast('Selected - press Ctrl+C');
+    }
+  });
+
+  init();
+})();
+</script>
+</body>
+</html>
