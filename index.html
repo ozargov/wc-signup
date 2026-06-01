@@ -560,7 +560,7 @@
     const free=Number(cls.free),booked=cls.user_booked!=null||cls.is_booked===1;
     if(booked)      return{key:'booked',label:'Booked',cls:'pill-blue'};
     if(start<now)   return{key:'past',  label:'Past',  cls:'pill-gray'};
-    if(free===0)    return{key:'full',  label:'Full',  cls:'pill-red'};
+    if(free<=0||cls.stand_by>0) return{key:'full',label:cls.stand_by>0?'Full ('+cls.stand_by+' waiting)':'Full',cls:'pill-red'};
     if(now>=opens)  return{key:'open',  label:'Open now',cls:'pill-green'};
     const mins=Math.round((opens-now)/60000),hrs=Math.round(mins/60);
     let label;
