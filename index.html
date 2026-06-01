@@ -200,10 +200,6 @@
         <div id="list-scheduled"></div>
       </div>
 
-      <div class="plan-section">
-        <h3>Recent workflow runs <span class="count" id="count-runs">0</span></h3>
-        <div id="list-runs"></div>
-      </div>
 
       <div class="plan-section">
         <h3>Confirmed <span class="count" id="count-confirmed">0</span></h3>
@@ -478,12 +474,11 @@
   // ── Plan tab ──
   async function loadPlan() {
     setPlanErr(null);
-    $('list-scheduled').innerHTML=$('list-confirmed').innerHTML=$('list-runs').innerHTML='<div class="small-muted">Loading...</div>';
-    let scheduled=[],confirmed=[],runs=[];
+    $('list-scheduled').innerHTML=$('list-confirmed').innerHTML='<div class="small-muted">Loading...</div>';
+    let scheduled=[],confirmed=[];
     const gh=getGH();
     if(gh&&gh.pat){
       try{scheduled=await fetchBookingWorkflows();}catch(e){setPlanErr('Workflows: '+(e.message||e));}
-      try{runs=await fetchRuns();}catch(e){}
     }
     try{confirmed=await fetchConfirmed();}catch(e){const p=$('plan-error').textContent;setPlanErr((p?p+'\n':'')+'Confirmed: '+(e.message||e));}
     renderPlan(scheduled,confirmed,runs);
@@ -492,7 +487,6 @@
   function renderPlan(scheduled,confirmed,runs){
     $('count-scheduled').textContent=String(scheduled.length);
     $('count-confirmed').textContent=String(confirmed.length);
-    $('count-runs').textContent=String(runs.length);
 
     // Queued — each entry is a workflow file named book-YYYY-MM-DD-HHMM.yml
     const sC=$('list-scheduled');sC.innerHTML='';
@@ -517,24 +511,6 @@
           catch(e){alert('Could not cancel: '+(e.message||e));btn.disabled=false;btn.textContent='Cancel';}
         });
       });
-    }
-
-    // Runs
-    const rC=$('list-runs');rC.innerHTML='';
-    if(!runs.length){rC.innerHTML='<div class="empty"><div class="big">No runs yet</div></div>';}
-    else{
-      const gh=getGH()||{user:'',repo:''};
-      const pillMap={completed:'pill-green',success:'pill-green',failure:'pill-red',in_progress:'pill-amber',queued:'pill-amber',cancelled:'pill-gray'};
-      for(const run of runs.slice(0,8)){
-        const key=run.conclusion||run.status||'unknown';
-        const pCls=pillMap[key]||'pill-gray';
-        const when=run.created_at?fmtDTHuman(new Date(run.created_at)):'';
-        const trigger=run.event==='schedule'?'auto':'manual';
-        const url=run.html_url||`https://github.com/${gh.user}/${gh.repo}/actions`;
-        const div=document.createElement('div');div.className='plan-card gh-run';
-        div.innerHTML='<div class="body"><div class="when"><a href="'+esc(url)+'" target="_blank" style="color:inherit;text-decoration:none;">'+esc(when)+'</a></div><div class="what">'+esc(trigger)+' · '+esc(run.display_title||run.head_commit&&run.head_commit.message||'run')+'</div></div><span class="pill '+pCls+'">'+esc(key)+'</span>';
-        rC.appendChild(div);
-      }
     }
 
     // Confirmed
