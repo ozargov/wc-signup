@@ -481,10 +481,10 @@
       try{scheduled=await fetchBookingWorkflows();}catch(e){setPlanErr('Workflows: '+(e.message||e));}
     }
     try{confirmed=await fetchConfirmed();}catch(e){const p=$('plan-error').textContent;setPlanErr((p?p+'\n':'')+'Confirmed: '+(e.message||e));}
-    renderPlan(scheduled,confirmed,runs);
+    renderPlan(scheduled,confirmed);
   }
 
-  function renderPlan(scheduled,confirmed,runs){
+  function renderPlan(scheduled,confirmed){
     $('count-scheduled').textContent=String(scheduled.length);
     $('count-confirmed').textContent=String(confirmed.length);
 
