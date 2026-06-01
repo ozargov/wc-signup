@@ -64,16 +64,27 @@ def _headers(token=None, refresh=None, whitelabel="HYPR-training"):
     return h
 
 
+def _decompress(data):
+    """Decompress gzip/deflate response bytes if needed."""
+    if data[:2] == b'\x1f\x8b':
+        import gzip
+        return gzip.decompress(data)
+    if data[:2] in (b'x\x9c', b'x\x01', b'x\xda'):
+        import zlib
+        return zlib.decompress(data)
+    return data
+
 def _post(url, headers, body):
     data = json.dumps(body).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers=headers, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
-            return resp.status, json.loads(resp.read().decode("utf-8"))
+            raw = _decompress(resp.read())
+            return resp.status, json.loads(raw.decode("utf-8"))
     except urllib.error.HTTPError as e:
         body_bytes = b""
         try:
-            body_bytes = e.read()
+            body_bytes = _decompress(e.read())
         except Exception:
             pass
         try:
