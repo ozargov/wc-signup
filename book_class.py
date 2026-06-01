@@ -47,7 +47,12 @@ def log(msg, color=None):
 def _headers(token=None, refresh=None, whitelabel="HYPR-training"):
     h = {
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+        "Origin": "https://app.arboxapp.com",
+        "Referer": "https://app.arboxapp.com/",
         "whitelabel": whitelabel,
         "referername": "app",
         "version": "11",
