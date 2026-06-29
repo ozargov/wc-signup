@@ -1,7 +1,7 @@
 [build]
-builder = "nixpacks"
+builder = "dockerfile"
 
 [deploy]
-startCommand = "python3 watchdog.py"
+startCommand = "python3 bot.py"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
