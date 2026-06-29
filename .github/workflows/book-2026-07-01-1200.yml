@@ -1,0 +1,38 @@
+name: Book 2026-07-01 12:00
+on:
+  schedule:
+    - cron: '57 8 29 6 *'
+  workflow_dispatch: {}
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Book class
+        env:
+          TZ:                       Asia/Jerusalem
+          ARBOX_EMAIL:              ${{ secrets.ARBOX_EMAIL }}
+          ARBOX_PASSWORD:           ${{ secrets.ARBOX_PASSWORD }}
+          ARBOX_WHITELABEL:         ${{ secrets.ARBOX_WHITELABEL }}
+          ARBOX_BOXES_ID:           ${{ secrets.ARBOX_BOXES_ID }}
+          ARBOX_LOCATIONS_BOX_ID:   ${{ secrets.ARBOX_LOCATIONS_BOX_ID }}
+          ARBOX_MEMBERSHIP_USER_ID: ${{ secrets.ARBOX_MEMBERSHIP_USER_ID }}
+        run: |
+          python book_class.py \
+            --class-date "2026-07-01" \
+            --class-time "12:00" \
+            --category-filter "original HALL A" \
+            --wait-for-window
+      - name: Remove this workflow
+        if: always()
+        run: |
+          git config user.email "wc-signup-bot@users.noreply.github.com"
+          git config user.name "WC Signup Bot"
+          git rm .github/workflows/book-2026-07-01-1200.yml
+          git commit -m "Done: 2026-07-01 12:00"
+          git push
