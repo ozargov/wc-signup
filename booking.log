@@ -1,0 +1,2471 @@
+﻿[2026-05-25 17:11:36.507] ==================================================
+[2026-05-25 17:11:36.545] Target class: 2026-05-27 07:00 Wednesday
+[2026-05-25 17:11:36.551] Window opens: 2026-05-25 07:00:00.000
+[2026-05-25 17:11:36.556] Category filter: 'HYROX'
+[2026-05-25 17:11:36.559] Now:          2026-05-25 17:11:36.559
+[2026-05-25 17:11:36.562] DryRun:       True
+[2026-05-25 17:11:36.566] Step 1: login...
+[2026-05-25 17:11:36.937]   logged in (token len 388)
+[2026-05-25 17:11:36.946] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:11:37.499]   got 20 classes for 2026-05-27
+[2026-05-25 17:12:31.719] ==================================================
+[2026-05-25 17:12:31.752] Target class: 2026-05-27 07:00 Wednesday
+[2026-05-25 17:12:31.756] Window opens: 2026-05-25 07:00:00.000
+[2026-05-25 17:12:31.758] Category filter: 'HYROX'
+[2026-05-25 17:12:31.761] Now:          2026-05-25 17:12:31.761
+[2026-05-25 17:12:31.765] DryRun:       True
+[2026-05-25 17:12:31.768] Step 1: login...
+[2026-05-25 17:12:32.040]   logged in (token len 388)
+[2026-05-25 17:12:32.045] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:12:32.517]   got 20 classes for 2026-05-27
+[2026-05-25 17:12:32.541] Target found: id=73423375  07:00  HYROX  coach=גיא מיברג  free=1
+[2026-05-25 17:12:32.549] DRY RUN -- would POST /scheduleUser/insert with body:
+[2026-05-25 17:12:32.554] {
+    "extras":  null,
+    "schedule_id":  73423375,
+    "membership_user_id":  13705578
+}
+[2026-05-25 17:12:32.556] Done (dry run).
+[2026-05-25 17:13:05.654] ==================================================
+[2026-05-25 17:13:05.695] Target class: 2026-05-27 07:00 Wednesday
+[2026-05-25 17:13:05.702] Window opens: 2026-05-25 07:00:00.000
+[2026-05-25 17:13:05.708] Category filter: 'HYROX'
+[2026-05-25 17:13:05.712] Now:          2026-05-25 17:13:05.712
+[2026-05-25 17:13:05.719] DryRun:       False
+[2026-05-25 17:13:05.723] Step 1: login...
+[2026-05-25 17:13:06.126]   logged in (token len 388)
+[2026-05-25 17:13:06.133] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:13:06.707]   got 20 classes for 2026-05-27
+[2026-05-25 17:13:06.750] Target found: id=73423375  07:00  HYROX  coach=גיא מיברג  free=1
+[2026-05-25 17:13:06.756] Step 5: POST /scheduleUser/insert ...
+[2026-05-25 17:13:07.374] Attempt 1 SUCCESS at 17:13:07.373
+[2026-05-25 17:13:07.387] {
+    "data":  {
+                 "id":  73423375,
+                 "time":  "07:00",
+                 "end_time":  "08:00",
+                 "date":  "2026-05-27",
+                 "second_coach_fk":  null,
+                 "coach_fk":  17529,
+                 "box_category_fk":  40068,
+                 "locations_box_fk":  48,
+                 "box_fk":  59,
+                 "max_users":  16,
+                 "series_fk":  552721,
+                 "live_link":  null,
+                 "has_spots":  0,
+                 "availability_id":  null,
+                 "disable_cancellation_time":  1,
+                 "enable_late_cancellation":  1,
+                 "enable_registration_time":  48,
+                 "status":  "active",
+                 "spaces_id":  null,
+                 "workout_id":  299290,
+                 "late_cancellation":  null,
+                 "past":  0,
+                 "user_booked":  169524559,
+                 "user_in_standby":  null,
+                 "stand_by_position":  null,
+                 "booked_users":  [
+                                      {
+                                          "id":  684520,
+                                          "first_name":  "אליה",
+                                          "last_name":  "אביטן",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/ybsjjruy1wi2dh7mc9g6.jpg",
+                                          "schedule_user_id":  169447903,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  4189127,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "א",
+                                          "full_name_shorten":  "אליה א",
+                                          "full_name":  "אליה אביטן",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  1524211,
+                                          "first_name":  "עידו",
+                                          "last_name":  "בכר",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/y1iqnpqy9ywvqs0op9ra.jpg",
+                                          "schedule_user_id":  169448623,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  3988432,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "ב",
+                                          "full_name_shorten":  "עידו ב",
+                                          "full_name":  "עידו בכר",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  8362889,
+                                          "first_name":  "נועם",
+                                          "last_name":  "אלימלך",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/dvr8ifruksinkj8oru2c.jpg",
+                                          "schedule_user_id":  169448653,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  14693056,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "א",
+                                          "full_name_shorten":  "נועם א",
+                                          "full_name":  "נועם אלימלך",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  7186105,
+                                          "first_name":  "אלה",
+                                          "last_name":  "הר",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/hp6hkmmiu8zrnwiktog9.jpg",
+                                          "schedule_user_id":  169461273,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15455843,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "ה",
+                                          "full_name_shorten":  "אלה ה",
+                                          "full_name":  "אלה הר",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  8004643,
+                                          "first_name":  "אביחי",
+                                          "last_name":  "מוסרי",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/ezh5yozci8qnysax5yko.jpg",
+                                          "schedule_user_id":  169489966,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  14443776,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "מ",
+                                          "full_name_shorten":  "אביחי מ",
+                                          "full_name":  "אביחי מוסרי",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  7830932,
+                                          "first_name":  "Stephanie",
+                                          "last_name":  "Cabral",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/mmpx0qrqznlejiw9ibez.jpg",
+                                          "schedule_user_id":  169510408,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13391273,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "C",
+                                          "full_name_shorten":  "Stephanie C",
+                                          "full_name":  "Stephanie Cabral",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  8834110,
+                                          "first_name":  "דניאל",
+                                          "last_name":  "בלינוב",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/izdswhkei5i1ule7d8ks.jpg",
+                                          "schedule_user_id":  169513510,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15799509,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "ב",
+                                          "full_name_shorten":  "דניאל ב",
+                                          "full_name":  "דניאל בלינוב",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  23200,
+                                          "first_name":  "Yarin",
+                                          "last_name":  "Cohen",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/engr9gewcnstwphkcbbo.jpg",
+                                          "schedule_user_id":  169517651,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13266030,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "C",
+                                          "full_name_shorten":  "Yarin C",
+                                          "full_name":  "Yarin Cohen",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  5456836,
+                                          "first_name":  "מיכאל",
+                                          "last_name":  "ח",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/inzqujyxyvv0iqwirkj0.jpg",
+                                          "schedule_user_id":  169517879,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15791012,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "ח",
+                                          "full_name_shorten":  "מיכאל ח",
+                                          "full_name":  "מיכאל ח",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  8708216,
+                                          "first_name":  "Yossi",
+                                          "last_name":  "Barsha",
+                                          "image":  "",
+                                          "schedule_user_id":  169448536,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15726402,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "B",
+                                          "full_name_shorten":  "Yossi B",
+                                          "full_name":  "Yossi Barsha",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  265873,
+                                          "first_name":  "שי",
+                                          "last_name":  "אלמגור",
+                                          "image":  "",
+                                          "schedule_user_id":  169448976,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15299444,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "א",
+                                          "full_name_shorten":  "שי א",
+                                          "full_name":  "שי אלמגור",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  6149238,
+                                          "first_name":  "נמרוד",
+                                          "last_name":  "וינשטין",
+                                          "image":  "",
+                                          "schedule_user_id":  169452374,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15347131,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "ו",
+                                          "full_name_shorten":  "נמרוד ו",
+                                          "full_name":  "נמרוד וינשטין",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  1162369,
+                                          "first_name":  "Hila",
+                                          "last_name":  "K",
+                                          "image":  "",
+                                          "schedule_user_id":  169452455,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13502397,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "K",
+                                          "full_name_shorten":  "Hila K",
+                                          "full_name":  "Hila K",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  946067,
+                                          "first_name":  "עידן",
+                                          "last_name":  "בנרם",
+                                          "image":  "",
+                                          "schedule_user_id":  169477814,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15850234,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "ב",
+                                          "full_name_shorten":  "עידן ב",
+                                          "full_name":  "עידן בנרם",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  1061044,
+                                          "first_name":  "מרים",
+                                          "last_name":  "קומסקי",
+                                          "image":  "",
+                                          "schedule_user_id":  169502576,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15455681,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "ק",
+                                          "full_name_shorten":  "מרים ק",
+                                          "full_name":  "מרים קומסקי",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  247474,
+                                          "first_name":  "Oz",
+                                          "last_name":  "A",
+                                          "image":  "",
+                                          "schedule_user_id":  169524559,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13705578,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  73423375,
+                                          "last_name_shorten":  "A",
+                                          "full_name_shorten":  "Oz A",
+                                          "full_name":  "Oz A",
+                                          "is_user":  true
+                                      }
+                                  ],
+                 "stand_by":  0,
+                 "free":  0,
+                 "registered":  16,
+                 "booking_option":  "cancelScheduleUser",
+                 "is_swappable_schedule":  false,
+                 "reschedule":  false,
+                 "day_of_week":  3,
+                 "date_time":  {
+                                   "date":  "2026-05-27 07:00:00",
+                                   "timezone":  "Asia/Jerusalem"
+                               },
+                 "end_date_time":  {
+                                       "date":  "2026-05-27 08:00:00",
+                                       "timezone":  "Asia/Jerusalem"
+                                   },
+                 "box":  {
+                             "id":  59,
+                             "name":  "CrossFit White City",
+                             "has_regular_clients":  0,
+                             "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_200,w_200,f_auto,q_auto/h0tllkam00g2aro9ilk5.jpg",
+                             "phone":  "0587800466"
+                         },
+                 "box_categories":  {
+                                        "id":  40068,
+                                        "name":  "HYROX",
+                                        "bio":  null,
+                                        "category_color":  "#E4FCB5",
+                                        "length":  60,
+                                        "price":  null,
+                                        "type":  1,
+                                        "color_name":  "cat-color-5",
+                                        "membership_types":  [
+
+                                                             ],
+                                        "box_categories_groups":  [
+                                                                      {
+                                                                          "id":  429,
+                                                                          "name":  "אימונים קבוצתיים",
+                                                                          "boxes_id":  59,
+                                                                          "active":  1,
+                                                                          "created_at":  "2024-06-03T06:22:39.000000Z",
+                                                                          "updated_at":  "2025-01-05T05:50:57.000000Z",
+                                                                          "deleted_at":  null,
+                                                                          "laravel_through_key":  40068
+                                                                      }
+                                                                  ],
+                                        "redirect_prop":  null,
+                                        "category_type":  {
+                                                              "id":  1,
+                                                              "name":  "class",
+                                                              "created_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "updated_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "deleted_at":  null
+                                                          }
+                                    },
+                 "locations_box":  {
+                                       "id":  48,
+                                       "location":  "אימונים קבוצתיים- וייט סיטי",
+                                       "logo":  null,
+                                       "date_format":  "DD/MM/YYYY",
+                                       "time_format":  "HH:mm",
+                                       "timezone":  "Asia/Jerusalem",
+                                       "debit_block":  1,
+                                       "medical_cert":  0,
+                                       "without_waiver":  1,
+                                       "epidemic_statement":  0,
+                                       "min_age_block":  null,
+                                       "gender_block":  null,
+                                       "address":  "Derech Menachem Begin 125, Tel Aviv-Yafo",
+                                       "currency_symbol":  "",
+                                       "has_shop":  true
+                                   },
+                 "series":  {
+                                "id":  552721,
+                                "series_name":  "HYROX,רביעי,07:00",
+                                "box_fk":  59,
+                                "locations_box_fk":  48,
+                                "spaces_id":  null,
+                                "season_id":  null,
+                                "box_category_fk":  40068,
+                                "start_date":  "2025-11-05",
+                                "end_date":  null,
+                                "price":  null,
+                                "start_time":  "07:00:00",
+                                "end_time":  "08:00:00",
+                                "status":  "active",
+                                "day":  "day-4",
+                                "max_users":  16,
+                                "min_users":  0,
+                                "has_spots":  0,
+                                "cancel_limit_min":  0,
+                                "coach_fk":  17529,
+                                "second_coach_fk":  null,
+                                "live_link":  null,
+                                "enable_registration_time":  48,
+                                "block_registration_time":  0,
+                                "disable_cancellation_time":  1,
+                                "enable_late_cancellation":  1,
+                                "transparent":  0,
+                                "register_group_member":  0,
+                                "allow_mid_booking":  0,
+                                "created_at":  "2025-10-20T11:11:07.000000Z",
+                                "updated_at":  "2026-05-16T08:43:33.000000Z",
+                                "deleted_at":  null,
+                                "remaining_slots":  96,
+                                "custom_field_value":  [
+
+                                                       ],
+                                "membership_types":  [
+
+                                                     ]
+                            },
+                 "disable_pages_app":  [
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "logBook",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "wod",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "schedule",
+                                               "section_name":  "standBy",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "registerWithoutMembership",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "allowMTStartDateSelection",
+                                               "laravel_through_key":  48
+                                           }
+                                       ],
+                 "spaces":  null,
+                 "custom_field_value":  [
+
+                                        ],
+                 "schedule_user":  [
+                                       {
+                                           "id":  684520,
+                                           "first_name":  "אליה",
+                                           "last_name":  "אביטן",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/ybsjjruy1wi2dh7mc9g6.jpg",
+                                           "schedule_user_id":  169447903,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  4189127,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "א",
+                                           "full_name_shorten":  "אליה א",
+                                           "full_name":  "אליה אביטן",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  8708216,
+                                           "first_name":  "Yossi",
+                                           "last_name":  "Barsha",
+                                           "image":  "",
+                                           "schedule_user_id":  169448536,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15726402,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "B",
+                                           "full_name_shorten":  "Yossi B",
+                                           "full_name":  "Yossi Barsha",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  1524211,
+                                           "first_name":  "עידו",
+                                           "last_name":  "בכר",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/y1iqnpqy9ywvqs0op9ra.jpg",
+                                           "schedule_user_id":  169448623,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  3988432,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "ב",
+                                           "full_name_shorten":  "עידו ב",
+                                           "full_name":  "עידו בכר",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  8362889,
+                                           "first_name":  "נועם",
+                                           "last_name":  "אלימלך",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/dvr8ifruksinkj8oru2c.jpg",
+                                           "schedule_user_id":  169448653,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  14693056,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "א",
+                                           "full_name_shorten":  "נועם א",
+                                           "full_name":  "נועם אלימלך",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  265873,
+                                           "first_name":  "שי",
+                                           "last_name":  "אלמגור",
+                                           "image":  "",
+                                           "schedule_user_id":  169448976,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15299444,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "א",
+                                           "full_name_shorten":  "שי א",
+                                           "full_name":  "שי אלמגור",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  6149238,
+                                           "first_name":  "נמרוד",
+                                           "last_name":  "וינשטין",
+                                           "image":  "",
+                                           "schedule_user_id":  169452374,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15347131,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "ו",
+                                           "full_name_shorten":  "נמרוד ו",
+                                           "full_name":  "נמרוד וינשטין",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  1162369,
+                                           "first_name":  "Hila",
+                                           "last_name":  "K",
+                                           "image":  "",
+                                           "schedule_user_id":  169452455,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13502397,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "K",
+                                           "full_name_shorten":  "Hila K",
+                                           "full_name":  "Hila K",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  7186105,
+                                           "first_name":  "אלה",
+                                           "last_name":  "הר",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/hp6hkmmiu8zrnwiktog9.jpg",
+                                           "schedule_user_id":  169461273,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15455843,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "ה",
+                                           "full_name_shorten":  "אלה ה",
+                                           "full_name":  "אלה הר",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  946067,
+                                           "first_name":  "עידן",
+                                           "last_name":  "בנרם",
+                                           "image":  "",
+                                           "schedule_user_id":  169477814,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15850234,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "ב",
+                                           "full_name_shorten":  "עידן ב",
+                                           "full_name":  "עידן בנרם",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  8004643,
+                                           "first_name":  "אביחי",
+                                           "last_name":  "מוסרי",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/ezh5yozci8qnysax5yko.jpg",
+                                           "schedule_user_id":  169489966,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  14443776,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "מ",
+                                           "full_name_shorten":  "אביחי מ",
+                                           "full_name":  "אביחי מוסרי",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  1061044,
+                                           "first_name":  "מרים",
+                                           "last_name":  "קומסקי",
+                                           "image":  "",
+                                           "schedule_user_id":  169502576,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15455681,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "ק",
+                                           "full_name_shorten":  "מרים ק",
+                                           "full_name":  "מרים קומסקי",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  7830932,
+                                           "first_name":  "Stephanie",
+                                           "last_name":  "Cabral",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/mmpx0qrqznlejiw9ibez.jpg",
+                                           "schedule_user_id":  169510408,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13391273,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "C",
+                                           "full_name_shorten":  "Stephanie C",
+                                           "full_name":  "Stephanie Cabral",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  8834110,
+                                           "first_name":  "דניאל",
+                                           "last_name":  "בלינוב",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/izdswhkei5i1ule7d8ks.jpg",
+                                           "schedule_user_id":  169513510,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15799509,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "ב",
+                                           "full_name_shorten":  "דניאל ב",
+                                           "full_name":  "דניאל בלינוב",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  23200,
+                                           "first_name":  "Yarin",
+                                           "last_name":  "Cohen",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/engr9gewcnstwphkcbbo.jpg",
+                                           "schedule_user_id":  169517651,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13266030,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "C",
+                                           "full_name_shorten":  "Yarin C",
+                                           "full_name":  "Yarin Cohen",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  5456836,
+                                           "first_name":  "מיכאל",
+                                           "last_name":  "ח",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/inzqujyxyvv0iqwirkj0.jpg",
+                                           "schedule_user_id":  169517879,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15791012,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "ח",
+                                           "full_name_shorten":  "מיכאל ח",
+                                           "full_name":  "מיכאל ח",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  247474,
+                                           "first_name":  "Oz",
+                                           "last_name":  "A",
+                                           "image":  "",
+                                           "schedule_user_id":  169524559,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13705578,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  73423375,
+                                           "last_name_shorten":  "A",
+                                           "full_name_shorten":  "Oz A",
+                                           "full_name":  "Oz A",
+                                           "is_user":  true
+                                       }
+                                   ],
+                 "schedule_stand_by":  [
+
+                                       ],
+                 "coach":  {
+                               "id":  17529,
+                               "bio":  null,
+                               "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/r30ukuzrdo0g7nq0ynw7.jpg",
+                               "user_fk":  17529,
+                               "first_name":  "גיא",
+                               "last_name":  "מיברג",
+                               "box_fk":  59,
+                               "image_public_id_cloudinary":  "r30ukuzrdo0g7nq0ynw7",
+                               "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/r30ukuzrdo0g7nq0ynw7.jpg",
+                               "last_name_shorten":  "מ",
+                               "full_name_shorten":  "גיא מ",
+                               "full_name":  "גיא מיברג",
+                               "is_user":  true
+                           },
+                 "second_coach":  null
+             }
+}
+
+[2026-05-25 17:13:07.395] BOOKING CONFIRMED for 2026-05-27 07:00 -- HYROX
+[2026-05-25 17:13:55.227] ==================================================
+[2026-05-25 17:13:55.273] Target class: 2026-05-27 07:00 Wednesday
+[2026-05-25 17:13:55.277] Window opens: 2026-05-25 07:00:00.000
+[2026-05-25 17:13:55.282] Category filter: 'Hall A'
+[2026-05-25 17:13:55.285] Now:          2026-05-25 17:13:55.285
+[2026-05-25 17:13:55.291] DryRun:       True
+[2026-05-25 17:13:55.295] Step 1: login...
+[2026-05-25 17:13:55.584]   logged in (token len 388)
+[2026-05-25 17:13:55.591] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:13:56.076]   got 20 classes for 2026-05-27
+[2026-05-25 17:13:56.107] Target found: id=50277526  07:00  W.O.D Hall A  coach=שקד אטדגי  free=0
+[2026-05-25 17:13:56.113] DRY RUN -- would POST /scheduleUser/insert with body:
+[2026-05-25 17:13:56.118] {
+    "extras":  null,
+    "schedule_id":  50277526,
+    "membership_user_id":  13705578
+}
+[2026-05-25 17:13:56.120] Done (dry run).
+[2026-05-25 17:14:30.717] ==================================================
+[2026-05-25 17:14:30.747] Target class: 2026-05-27 06:00 Wednesday
+[2026-05-25 17:14:30.750] Window opens: 2026-05-25 06:00:00.000
+[2026-05-25 17:14:30.753] Category filter: 'Hall A'
+[2026-05-25 17:14:30.755] Now:          2026-05-25 17:14:30.755
+[2026-05-25 17:14:30.758] DryRun:       True
+[2026-05-25 17:14:30.760] Step 1: login...
+[2026-05-25 17:14:31.101]   logged in (token len 388)
+[2026-05-25 17:14:31.106] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:14:31.626]   got 20 classes for 2026-05-27
+[2026-05-25 17:14:31.656] Target found: id=51366834  06:00  W.O.D Hall A  coach=שקד אטדגי  free=19
+[2026-05-25 17:14:31.661] DRY RUN -- would POST /scheduleUser/insert with body:
+[2026-05-25 17:14:31.664] {
+    "extras":  null,
+    "schedule_id":  51366834,
+    "membership_user_id":  13705578
+}
+[2026-05-25 17:14:31.669] Done (dry run).
+[2026-05-25 17:15:27.673] ==================================================
+[2026-05-25 17:15:27.709] Target class: 2026-05-27 06:00 Wednesday
+[2026-05-25 17:15:27.712] Window opens: 2026-05-25 06:00:00.000
+[2026-05-25 17:15:27.716] Category filter: 'Hall A'
+[2026-05-25 17:15:27.720] Now:          2026-05-25 17:15:27.720
+[2026-05-25 17:15:27.723] DryRun:       True
+[2026-05-25 17:15:27.726] Step 1: login...
+[2026-05-25 17:15:27.997]   logged in (token len 388)
+[2026-05-25 17:15:28.002] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:15:28.444]   got 20 classes for 2026-05-27
+[2026-05-25 17:15:28.468] Target found: id=51366834  06:00  W.O.D Hall A  coach=שקד אטדגי  free=19
+[2026-05-25 17:15:28.473] DRY RUN -- would POST /scheduleUser/insert with body:
+[2026-05-25 17:15:28.476] {
+    "extras":  null,
+    "schedule_id":  51366834,
+    "membership_user_id":  13705578
+}
+[2026-05-25 17:15:28.479] Done (dry run).
+[2026-05-25 17:16:28.388] ==================================================
+[2026-05-25 17:16:28.420] Target class: 2026-05-27 06:00 Wednesday
+[2026-05-25 17:16:28.423] Window opens: 2026-05-25 06:00:00.000
+[2026-05-25 17:16:28.426] Category filter: 'Hall A'
+[2026-05-25 17:16:28.428] Now:          2026-05-25 17:16:28.428
+[2026-05-25 17:16:28.432] DryRun:       False
+[2026-05-25 17:16:28.434] Step 1: login...
+[2026-05-25 17:16:28.789]   logged in (token len 388)
+[2026-05-25 17:16:28.793] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:16:29.217]   got 20 classes for 2026-05-27
+[2026-05-25 17:16:29.260] Target found: id=51366834  06:00  W.O.D Hall A  coach=שקד אטדגי  free=19
+[2026-05-25 17:16:29.264] Step 5: POST /scheduleUser/insert ...
+[2026-05-25 17:16:30.096] Attempt 1 SUCCESS at 17:16:30.096
+[2026-05-25 17:16:30.105] {
+    "data":  {
+                 "id":  51366834,
+                 "time":  "06:00",
+                 "end_time":  "07:00",
+                 "date":  "2026-05-27",
+                 "second_coach_fk":  null,
+                 "coach_fk":  1184005,
+                 "box_category_fk":  40066,
+                 "locations_box_fk":  48,
+                 "box_fk":  59,
+                 "max_users":  20,
+                 "series_fk":  406951,
+                 "live_link":  null,
+                 "has_spots":  0,
+                 "availability_id":  null,
+                 "disable_cancellation_time":  1,
+                 "enable_late_cancellation":  1,
+                 "enable_registration_time":  48,
+                 "status":  "active",
+                 "spaces_id":  null,
+                 "workout_id":  299289,
+                 "late_cancellation":  null,
+                 "past":  0,
+                 "user_booked":  169524935,
+                 "user_in_standby":  null,
+                 "stand_by_position":  null,
+                 "booked_users":  [
+                                      {
+                                          "id":  177196,
+                                          "first_name":  "אורי",
+                                          "last_name":  "כ.",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/pom2iwcrkgarcwru9kvp.jpg",
+                                          "schedule_user_id":  169492349,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  5913946,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  51366834,
+                                          "last_name_shorten":  "כ",
+                                          "full_name_shorten":  "אורי כ",
+                                          "full_name":  "אורי כ.",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  247474,
+                                          "first_name":  "Oz",
+                                          "last_name":  "A",
+                                          "image":  "",
+                                          "schedule_user_id":  169524935,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13705578,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  51366834,
+                                          "last_name_shorten":  "A",
+                                          "full_name_shorten":  "Oz A",
+                                          "full_name":  "Oz A",
+                                          "is_user":  true
+                                      }
+                                  ],
+                 "stand_by":  0,
+                 "free":  18,
+                 "registered":  2,
+                 "booking_option":  "cancelScheduleUser",
+                 "is_swappable_schedule":  false,
+                 "reschedule":  false,
+                 "day_of_week":  3,
+                 "date_time":  {
+                                   "date":  "2026-05-27 06:00:00",
+                                   "timezone":  "Asia/Jerusalem"
+                               },
+                 "end_date_time":  {
+                                       "date":  "2026-05-27 07:00:00",
+                                       "timezone":  "Asia/Jerusalem"
+                                   },
+                 "box":  {
+                             "id":  59,
+                             "name":  "CrossFit White City",
+                             "has_regular_clients":  0,
+                             "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_200,w_200,f_auto,q_auto/h0tllkam00g2aro9ilk5.jpg",
+                             "phone":  "0587800466"
+                         },
+                 "box_categories":  {
+                                        "id":  40066,
+                                        "name":  "W.O.D Hall A",
+                                        "bio":  "",
+                                        "category_color":  "#FFF6B8",
+                                        "length":  60,
+                                        "price":  null,
+                                        "type":  1,
+                                        "color_name":  "cat-color-6",
+                                        "membership_types":  [
+
+                                                             ],
+                                        "box_categories_groups":  [
+                                                                      {
+                                                                          "id":  429,
+                                                                          "name":  "אימונים קבוצתיים",
+                                                                          "boxes_id":  59,
+                                                                          "active":  1,
+                                                                          "created_at":  "2024-06-03T06:22:39.000000Z",
+                                                                          "updated_at":  "2025-01-05T05:50:57.000000Z",
+                                                                          "deleted_at":  null,
+                                                                          "laravel_through_key":  40066
+                                                                      }
+                                                                  ],
+                                        "redirect_prop":  null,
+                                        "category_type":  {
+                                                              "id":  1,
+                                                              "name":  "class",
+                                                              "created_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "updated_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "deleted_at":  null
+                                                          }
+                                    },
+                 "locations_box":  {
+                                       "id":  48,
+                                       "location":  "אימונים קבוצתיים- וייט סיטי",
+                                       "logo":  null,
+                                       "date_format":  "DD/MM/YYYY",
+                                       "time_format":  "HH:mm",
+                                       "timezone":  "Asia/Jerusalem",
+                                       "debit_block":  1,
+                                       "medical_cert":  0,
+                                       "without_waiver":  1,
+                                       "epidemic_statement":  0,
+                                       "min_age_block":  null,
+                                       "gender_block":  null,
+                                       "address":  "Derech Menachem Begin 125, Tel Aviv-Yafo",
+                                       "currency_symbol":  "",
+                                       "has_shop":  true
+                                   },
+                 "series":  {
+                                "id":  406951,
+                                "series_name":  "W.O.D Hall A,רביעי,06:00",
+                                "box_fk":  59,
+                                "locations_box_fk":  48,
+                                "spaces_id":  null,
+                                "season_id":  null,
+                                "box_category_fk":  40066,
+                                "start_date":  "2024-09-25",
+                                "end_date":  null,
+                                "price":  null,
+                                "start_time":  "06:00:00",
+                                "end_time":  "07:00:00",
+                                "status":  "active",
+                                "day":  "day-4",
+                                "max_users":  20,
+                                "min_users":  0,
+                                "has_spots":  0,
+                                "cancel_limit_min":  0,
+                                "coach_fk":  1184005,
+                                "second_coach_fk":  null,
+                                "live_link":  null,
+                                "enable_registration_time":  48,
+                                "block_registration_time":  0,
+                                "disable_cancellation_time":  1,
+                                "enable_late_cancellation":  1,
+                                "transparent":  0,
+                                "register_group_member":  0,
+                                "allow_mid_booking":  0,
+                                "created_at":  "2024-08-25T11:20:22.000000Z",
+                                "updated_at":  "2025-11-09T14:23:14.000000Z",
+                                "deleted_at":  null,
+                                "remaining_slots":  96,
+                                "custom_field_value":  [
+
+                                                       ],
+                                "membership_types":  [
+
+                                                     ]
+                            },
+                 "disable_pages_app":  [
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "logBook",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "wod",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "schedule",
+                                               "section_name":  "standBy",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "registerWithoutMembership",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "allowMTStartDateSelection",
+                                               "laravel_through_key":  48
+                                           }
+                                       ],
+                 "spaces":  null,
+                 "custom_field_value":  [
+
+                                        ],
+                 "schedule_user":  [
+                                       {
+                                           "id":  177196,
+                                           "first_name":  "אורי",
+                                           "last_name":  "כ.",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/pom2iwcrkgarcwru9kvp.jpg",
+                                           "schedule_user_id":  169492349,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  5913946,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  51366834,
+                                           "last_name_shorten":  "כ",
+                                           "full_name_shorten":  "אורי כ",
+                                           "full_name":  "אורי כ.",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  247474,
+                                           "first_name":  "Oz",
+                                           "last_name":  "A",
+                                           "image":  "",
+                                           "schedule_user_id":  169524935,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13705578,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  51366834,
+                                           "last_name_shorten":  "A",
+                                           "full_name_shorten":  "Oz A",
+                                           "full_name":  "Oz A",
+                                           "is_user":  true
+                                       }
+                                   ],
+                 "schedule_stand_by":  [
+
+                                       ],
+                 "coach":  {
+                               "id":  1184005,
+                               "bio":  null,
+                               "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/v4apxmegkku658m9v6ly.jpg",
+                               "user_fk":  1184005,
+                               "first_name":  "שקד",
+                               "last_name":  "אטדגי",
+                               "box_fk":  59,
+                               "image_public_id_cloudinary":  "v4apxmegkku658m9v6ly",
+                               "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/v4apxmegkku658m9v6ly.jpg",
+                               "last_name_shorten":  "א",
+                               "full_name_shorten":  "שקד א",
+                               "full_name":  "שקד אטדגי",
+                               "is_user":  true
+                           },
+                 "second_coach":  null
+             }
+}
+
+[2026-05-25 17:16:30.108] BOOKING CONFIRMED for 2026-05-27 06:00 -- W.O.D Hall A
+[2026-05-25 17:17:55.749] ==================================================
+[2026-05-25 17:17:55.778] Target class: 2026-05-27 17:30 Wednesday
+[2026-05-25 17:17:55.784] Window opens: 2026-05-25 17:30:00.000
+[2026-05-25 17:17:55.787] Category filter: 'Gymnastics'
+[2026-05-25 17:17:55.789] Now:          2026-05-25 17:17:55.789
+[2026-05-25 17:17:55.792] DryRun:       False
+[2026-05-25 17:17:55.794] Step 1: login...
+[2026-05-25 17:17:56.145]   logged in (token len 388)
+[2026-05-25 17:17:56.150] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 17:17:56.705]   got 20 classes for 2026-05-27
+[2026-05-25 17:17:56.730] Target found: id=50246151  17:30  Gymnastics Hall B  coach=גיא מיברג  free=18
+[2026-05-25 17:17:56.744] Waiting 723.3 s until window opens...
+[2026-05-25 17:30:00.010] Window OPEN at 17:30:00.009
+[2026-05-25 17:30:00.020] Step 5: POST /scheduleUser/insert ...
+[2026-05-25 17:30:01.197] Attempt 1 SUCCESS at 17:30:01.186
+[2026-05-25 17:30:01.228] {
+    "data":  {
+                 "id":  50246151,
+                 "time":  "17:30",
+                 "end_time":  "18:30",
+                 "date":  "2026-05-27",
+                 "second_coach_fk":  null,
+                 "coach_fk":  17529,
+                 "box_category_fk":  40070,
+                 "locations_box_fk":  48,
+                 "box_fk":  59,
+                 "max_users":  18,
+                 "series_fk":  178432,
+                 "live_link":  null,
+                 "has_spots":  0,
+                 "availability_id":  null,
+                 "disable_cancellation_time":  1,
+                 "enable_late_cancellation":  1,
+                 "enable_registration_time":  48,
+                 "status":  "active",
+                 "spaces_id":  359,
+                 "workout_id":  null,
+                 "late_cancellation":  null,
+                 "past":  0,
+                 "user_booked":  169526911,
+                 "user_in_standby":  null,
+                 "stand_by_position":  null,
+                 "booked_users":  [
+                                      {
+                                          "id":  247474,
+                                          "first_name":  "Oz",
+                                          "last_name":  "A",
+                                          "image":  "",
+                                          "schedule_user_id":  169526911,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13705578,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50246151,
+                                          "last_name_shorten":  "A",
+                                          "full_name_shorten":  "Oz A",
+                                          "full_name":  "Oz A",
+                                          "is_user":  true
+                                      }
+                                  ],
+                 "stand_by":  0,
+                 "free":  17,
+                 "registered":  1,
+                 "booking_option":  "cancelScheduleUser",
+                 "is_swappable_schedule":  false,
+                 "reschedule":  false,
+                 "day_of_week":  3,
+                 "date_time":  {
+                                   "date":  "2026-05-27 17:30:00",
+                                   "timezone":  "Asia/Jerusalem"
+                               },
+                 "end_date_time":  {
+                                       "date":  "2026-05-27 18:30:00",
+                                       "timezone":  "Asia/Jerusalem"
+                                   },
+                 "box":  {
+                             "id":  59,
+                             "name":  "CrossFit White City",
+                             "has_regular_clients":  0,
+                             "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_200,w_200,f_auto,q_auto/h0tllkam00g2aro9ilk5.jpg",
+                             "phone":  "0587800466"
+                         },
+                 "box_categories":  {
+                                        "id":  40070,
+                                        "name":  "Gymnastics Hall B",
+                                        "bio":  "",
+                                        "category_color":  "#FEC8C8",
+                                        "length":  60,
+                                        "price":  null,
+                                        "type":  1,
+                                        "color_name":  "cat-color-9",
+                                        "membership_types":  [
+
+                                                             ],
+                                        "box_categories_groups":  [
+                                                                      {
+                                                                          "id":  429,
+                                                                          "name":  "אימונים קבוצתיים",
+                                                                          "boxes_id":  59,
+                                                                          "active":  1,
+                                                                          "created_at":  "2024-06-03T06:22:39.000000Z",
+                                                                          "updated_at":  "2025-01-05T05:50:57.000000Z",
+                                                                          "deleted_at":  null,
+                                                                          "laravel_through_key":  40070
+                                                                      }
+                                                                  ],
+                                        "redirect_prop":  null,
+                                        "category_type":  {
+                                                              "id":  1,
+                                                              "name":  "class",
+                                                              "created_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "updated_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "deleted_at":  null
+                                                          }
+                                    },
+                 "locations_box":  {
+                                       "id":  48,
+                                       "location":  "אימונים קבוצתיים- וייט סיטי",
+                                       "logo":  null,
+                                       "date_format":  "DD/MM/YYYY",
+                                       "time_format":  "HH:mm",
+                                       "timezone":  "Asia/Jerusalem",
+                                       "debit_block":  1,
+                                       "medical_cert":  0,
+                                       "without_waiver":  1,
+                                       "epidemic_statement":  0,
+                                       "min_age_block":  null,
+                                       "gender_block":  null,
+                                       "address":  "Derech Menachem Begin 125, Tel Aviv-Yafo",
+                                       "currency_symbol":  "",
+                                       "has_shop":  true
+                                   },
+                 "series":  {
+                                "id":  178432,
+                                "series_name":  "MOVE (סטודיו),רביעי,18:30",
+                                "box_fk":  59,
+                                "locations_box_fk":  48,
+                                "spaces_id":  359,
+                                "season_id":  null,
+                                "box_category_fk":  40070,
+                                "start_date":  null,
+                                "end_date":  null,
+                                "price":  null,
+                                "start_time":  "17:30:00",
+                                "end_time":  "18:30:00",
+                                "status":  "active",
+                                "day":  "day-4",
+                                "max_users":  18,
+                                "min_users":  0,
+                                "has_spots":  0,
+                                "cancel_limit_min":  null,
+                                "coach_fk":  17529,
+                                "second_coach_fk":  null,
+                                "live_link":  null,
+                                "enable_registration_time":  48,
+                                "block_registration_time":  0,
+                                "disable_cancellation_time":  1,
+                                "enable_late_cancellation":  1,
+                                "transparent":  0,
+                                "register_group_member":  0,
+                                "allow_mid_booking":  0,
+                                "created_at":  "2022-02-17T09:10:25.000000Z",
+                                "updated_at":  "2025-07-17T09:42:20.000000Z",
+                                "deleted_at":  null,
+                                "remaining_slots":  96,
+                                "custom_field_value":  [
+
+                                                       ],
+                                "membership_types":  [
+
+                                                     ]
+                            },
+                 "disable_pages_app":  [
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "logBook",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "wod",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "schedule",
+                                               "section_name":  "standBy",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "registerWithoutMembership",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "allowMTStartDateSelection",
+                                               "laravel_through_key":  48
+                                           }
+                                       ],
+                 "spaces":  {
+                                "id":  359,
+                                "name":  "HALL B",
+                                "image":  null,
+                                "locations_box_id":  48,
+                                "boxes_id":  59,
+                                "created_at":  "2024-01-10T11:50:31.000000Z",
+                                "updated_at":  "2024-01-10T11:50:31.000000Z",
+                                "deleted_at":  null,
+                                "hasSchedules":  true,
+                                "hasAvailabilities":  false
+                            },
+                 "custom_field_value":  [
+
+                                        ],
+                 "schedule_user":  [
+                                       {
+                                           "id":  247474,
+                                           "first_name":  "Oz",
+                                           "last_name":  "A",
+                                           "image":  "",
+                                           "schedule_user_id":  169526911,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13705578,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50246151,
+                                           "last_name_shorten":  "A",
+                                           "full_name_shorten":  "Oz A",
+                                           "full_name":  "Oz A",
+                                           "is_user":  true
+                                       }
+                                   ],
+                 "schedule_stand_by":  [
+
+                                       ],
+                 "coach":  {
+                               "id":  17529,
+                               "bio":  null,
+                               "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/r30ukuzrdo0g7nq0ynw7.jpg",
+                               "user_fk":  17529,
+                               "first_name":  "גיא",
+                               "last_name":  "מיברג",
+                               "box_fk":  59,
+                               "image_public_id_cloudinary":  "r30ukuzrdo0g7nq0ynw7",
+                               "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/r30ukuzrdo0g7nq0ynw7.jpg",
+                               "last_name_shorten":  "מ",
+                               "full_name_shorten":  "גיא מ",
+                               "full_name":  "גיא מיברג",
+                               "is_user":  true
+                           },
+                 "second_coach":  null
+             }
+}
+
+[2026-05-25 17:30:01.232] BOOKING CONFIRMED for 2026-05-27 17:30 -- Gymnastics Hall B
+[2026-05-25 20:58:02.626] ==================================================
+[2026-05-25 20:58:02.770] Target class: 2026-05-27 21:00 Wednesday
+[2026-05-25 20:58:02.786] Window opens: 2026-05-25 21:00:00.000
+[2026-05-25 20:58:02.786] Category filter: 'W.O.D Hall A'
+[2026-05-25 20:58:02.802] Now:          2026-05-25 20:58:02.802
+[2026-05-25 20:58:02.817] DryRun:       False
+[2026-05-25 20:58:02.833] Step 1: login...
+[2026-05-25 20:58:03.663]   logged in (token len 388)
+[2026-05-25 20:58:03.678] Step 2: fetching schedule for 2026-05-27...
+[2026-05-25 20:58:04.402]   got 20 classes for 2026-05-27
+[2026-05-25 20:58:04.492] Target found: id=53208536  21:00  W.O.D Hall A  coach=איריס באש  free=19
+[2026-05-25 20:58:04.543] Waiting 115.5 s until window opens...
+[2026-05-25 21:01:27.103] Window OPEN at 21:01:27.103
+[2026-05-25 21:01:27.115] Step 5: POST /scheduleUser/insert ...
+[2026-05-25 21:01:27.932] Attempt 1 SUCCESS at 21:01:27.932
+[2026-05-25 21:01:27.964] {
+    "data":  {
+                 "id":  53208536,
+                 "time":  "21:00",
+                 "end_time":  "22:00",
+                 "date":  "2026-05-27",
+                 "second_coach_fk":  null,
+                 "coach_fk":  83545,
+                 "box_category_fk":  40066,
+                 "locations_box_fk":  48,
+                 "box_fk":  59,
+                 "max_users":  20,
+                 "series_fk":  154654,
+                 "live_link":  null,
+                 "has_spots":  0,
+                 "availability_id":  null,
+                 "disable_cancellation_time":  1,
+                 "enable_late_cancellation":  1,
+                 "enable_registration_time":  48,
+                 "status":  "active",
+                 "spaces_id":  null,
+                 "workout_id":  299289,
+                 "late_cancellation":  null,
+                 "past":  0,
+                 "user_booked":  169560050,
+                 "user_in_standby":  null,
+                 "stand_by_position":  null,
+                 "booked_users":  [
+                                      {
+                                          "id":  7782208,
+                                          "first_name":  "Oded",
+                                          "last_name":  "Salton",
+                                          "image":  "",
+                                          "schedule_user_id":  169389428,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  null,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  53208536,
+                                          "last_name_shorten":  "S",
+                                          "full_name_shorten":  "Oded S",
+                                          "full_name":  "Oded Salton",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  247474,
+                                          "first_name":  "Oz",
+                                          "last_name":  "A",
+                                          "image":  "",
+                                          "schedule_user_id":  169560050,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13705578,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  53208536,
+                                          "last_name_shorten":  "A",
+                                          "full_name_shorten":  "Oz A",
+                                          "full_name":  "Oz A",
+                                          "is_user":  true
+                                      }
+                                  ],
+                 "stand_by":  0,
+                 "free":  18,
+                 "registered":  2,
+                 "booking_option":  "cancelScheduleUser",
+                 "is_swappable_schedule":  false,
+                 "reschedule":  false,
+                 "day_of_week":  3,
+                 "date_time":  {
+                                   "date":  "2026-05-27 21:00:00",
+                                   "timezone":  "Asia/Jerusalem"
+                               },
+                 "end_date_time":  {
+                                       "date":  "2026-05-27 22:00:00",
+                                       "timezone":  "Asia/Jerusalem"
+                                   },
+                 "box":  {
+                             "id":  59,
+                             "name":  "CrossFit White City",
+                             "has_regular_clients":  0,
+                             "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_200,w_200,f_auto,q_auto/h0tllkam00g2aro9ilk5.jpg",
+                             "phone":  "0587800466"
+                         },
+                 "box_categories":  {
+                                        "id":  40066,
+                                        "name":  "W.O.D Hall A",
+                                        "bio":  "",
+                                        "category_color":  "#FFF6B8",
+                                        "length":  60,
+                                        "price":  null,
+                                        "type":  1,
+                                        "color_name":  "cat-color-6",
+                                        "membership_types":  [
+
+                                                             ],
+                                        "box_categories_groups":  [
+                                                                      {
+                                                                          "id":  429,
+                                                                          "name":  "אימונים קבוצתיים",
+                                                                          "boxes_id":  59,
+                                                                          "active":  1,
+                                                                          "created_at":  "2024-06-03T06:22:39.000000Z",
+                                                                          "updated_at":  "2025-01-05T05:50:57.000000Z",
+                                                                          "deleted_at":  null,
+                                                                          "laravel_through_key":  40066
+                                                                      }
+                                                                  ],
+                                        "redirect_prop":  null,
+                                        "category_type":  {
+                                                              "id":  1,
+                                                              "name":  "class",
+                                                              "created_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "updated_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "deleted_at":  null
+                                                          }
+                                    },
+                 "locations_box":  {
+                                       "id":  48,
+                                       "location":  "אימונים קבוצתיים- וייט סיטי",
+                                       "logo":  null,
+                                       "date_format":  "DD/MM/YYYY",
+                                       "time_format":  "HH:mm",
+                                       "timezone":  "Asia/Jerusalem",
+                                       "debit_block":  1,
+                                       "medical_cert":  0,
+                                       "without_waiver":  1,
+                                       "epidemic_statement":  0,
+                                       "min_age_block":  null,
+                                       "gender_block":  null,
+                                       "address":  "Derech Menachem Begin 125, Tel Aviv-Yafo",
+                                       "currency_symbol":  "",
+                                       "has_shop":  true
+                                   },
+                 "series":  {
+                                "id":  154654,
+                                "series_name":  "W.O.D Hall A,רביעי,21:00",
+                                "box_fk":  59,
+                                "locations_box_fk":  48,
+                                "spaces_id":  null,
+                                "season_id":  null,
+                                "box_category_fk":  40066,
+                                "start_date":  null,
+                                "end_date":  null,
+                                "price":  null,
+                                "start_time":  "21:00:00",
+                                "end_time":  "22:00:00",
+                                "status":  "active",
+                                "day":  "day-4",
+                                "max_users":  20,
+                                "min_users":  0,
+                                "has_spots":  0,
+                                "cancel_limit_min":  null,
+                                "coach_fk":  83545,
+                                "second_coach_fk":  null,
+                                "live_link":  null,
+                                "enable_registration_time":  48,
+                                "block_registration_time":  0,
+                                "disable_cancellation_time":  1,
+                                "enable_late_cancellation":  1,
+                                "transparent":  0,
+                                "register_group_member":  0,
+                                "allow_mid_booking":  0,
+                                "created_at":  "2021-08-18T18:32:48.000000Z",
+                                "updated_at":  "2026-05-06T18:05:57.000000Z",
+                                "deleted_at":  null,
+                                "remaining_slots":  96,
+                                "custom_field_value":  [
+
+                                                       ],
+                                "membership_types":  [
+
+                                                     ]
+                            },
+                 "disable_pages_app":  [
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "logBook",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "wod",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "schedule",
+                                               "section_name":  "standBy",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "registerWithoutMembership",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "allowMTStartDateSelection",
+                                               "laravel_through_key":  48
+                                           }
+                                       ],
+                 "spaces":  null,
+                 "custom_field_value":  [
+
+                                        ],
+                 "schedule_user":  [
+                                       {
+                                           "id":  7782208,
+                                           "first_name":  "Oded",
+                                           "last_name":  "Salton",
+                                           "image":  "",
+                                           "schedule_user_id":  169389428,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  null,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  53208536,
+                                           "last_name_shorten":  "S",
+                                           "full_name_shorten":  "Oded S",
+                                           "full_name":  "Oded Salton",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  247474,
+                                           "first_name":  "Oz",
+                                           "last_name":  "A",
+                                           "image":  "",
+                                           "schedule_user_id":  169560050,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13705578,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  53208536,
+                                           "last_name_shorten":  "A",
+                                           "full_name_shorten":  "Oz A",
+                                           "full_name":  "Oz A",
+                                           "is_user":  true
+                                       }
+                                   ],
+                 "schedule_stand_by":  [
+
+                                       ],
+                 "coach":  {
+                               "id":  83545,
+                               "bio":  null,
+                               "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/svypvmr3qodyxwuzmmbw.jpg",
+                               "user_fk":  83545,
+                               "first_name":  "איריס",
+                               "last_name":  "באש",
+                               "box_fk":  59,
+                               "image_public_id_cloudinary":  "svypvmr3qodyxwuzmmbw",
+                               "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/svypvmr3qodyxwuzmmbw.jpg",
+                               "last_name_shorten":  "ב",
+                               "full_name_shorten":  "איריס ב",
+                               "full_name":  "איריס באש",
+                               "is_user":  true
+                           },
+                 "second_coach":  null
+             }
+}
+
+[2026-05-25 21:01:27.978] BOOKING CONFIRMED for 2026-05-27 21:00 -- W.O.D Hall A
+[2026-05-26 09:25:53.943] ==================================================
+[2026-05-26 09:25:54.085] Target class: 2026-05-28 08:00 Thursday
+[2026-05-26 09:25:54.085] Window opens: 2026-05-26 08:00:00.000
+[2026-05-26 09:25:54.085] Category filter: 'HYROX'
+[2026-05-26 09:25:54.101] Now:          2026-05-26 09:25:54.101
+[2026-05-26 09:25:54.107] DryRun:       False
+[2026-05-26 09:25:54.107] Step 1: login...
+[2026-05-26 09:25:54.621]   logged in (token len 388)
+[2026-05-26 09:25:54.626] Step 2: fetching schedule for 2026-05-28...
+[2026-05-26 09:25:55.182]   got 19 classes for 2026-05-28
+[2026-05-26 09:25:55.234] Target found: id=50207320  08:00  HYROX  coach=קאלי ארגוב  free=1
+[2026-05-26 09:25:55.252] Window already open (or past) -- firing immediately.
+[2026-05-26 09:25:55.253] Step 5: POST /scheduleUser/insert ...
+[2026-05-26 09:25:55.932] Attempt 1 SUCCESS at 09:25:55.931
+[2026-05-26 09:25:55.951] {
+    "data":  {
+                 "id":  50207320,
+                 "time":  "08:00",
+                 "end_time":  "09:00",
+                 "date":  "2026-05-28",
+                 "second_coach_fk":  null,
+                 "coach_fk":  4726621,
+                 "box_category_fk":  40068,
+                 "locations_box_fk":  48,
+                 "box_fk":  59,
+                 "max_users":  16,
+                 "series_fk":  394478,
+                 "live_link":  null,
+                 "has_spots":  0,
+                 "availability_id":  null,
+                 "disable_cancellation_time":  1,
+                 "enable_late_cancellation":  1,
+                 "enable_registration_time":  48,
+                 "status":  "active",
+                 "spaces_id":  null,
+                 "workout_id":  299292,
+                 "late_cancellation":  null,
+                 "past":  0,
+                 "user_booked":  169591839,
+                 "user_in_standby":  null,
+                 "stand_by_position":  null,
+                 "booked_users":  [
+                                      {
+                                          "id":  2285656,
+                                          "first_name":  "ולריה",
+                                          "last_name":  "זליקוביץ\u0027",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/ngiygyffzkpjqyh0vvph.jpg",
+                                          "schedule_user_id":  169581907,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15279267,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ז",
+                                          "full_name_shorten":  "ולריה ז",
+                                          "full_name":  "ולריה זליקוביץ\u0027",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  7964386,
+                                          "first_name":  "אורי",
+                                          "last_name":  "חיימוביץ",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/inglm1qnw67kkfhcyprd.jpg",
+                                          "schedule_user_id":  169582212,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13510107,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ח",
+                                          "full_name_shorten":  "אורי ח",
+                                          "full_name":  "אורי חיימוביץ",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  7304410,
+                                          "first_name":  "שחר",
+                                          "last_name":  "ג",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/muj3wvfrtpbzoo5vagki.jpg",
+                                          "schedule_user_id":  169582528,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  12189771,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ג",
+                                          "full_name_shorten":  "שחר ג",
+                                          "full_name":  "שחר ג",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  706651,
+                                          "first_name":  "לינוי",
+                                          "last_name":  "אקוני",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/xmsj30uzcbbadfgbdawv.jpg",
+                                          "schedule_user_id":  169582799,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  14679420,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "א",
+                                          "full_name_shorten":  "לינוי א",
+                                          "full_name":  "לינוי אקוני",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  7267008,
+                                          "first_name":  "פבריס",
+                                          "last_name":  "מ.",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/hrr4azremtqigr7zmwrx.jpg",
+                                          "schedule_user_id":  169585456,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13186291,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "מ",
+                                          "full_name_shorten":  "פבריס מ",
+                                          "full_name":  "פבריס מ.",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  3268116,
+                                          "first_name":  "שי",
+                                          "last_name":  "וינרב",
+                                          "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/wfu0n7fanngpidmauvln.jpg",
+                                          "schedule_user_id":  169588585,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  4710736,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ו",
+                                          "full_name_shorten":  "שי ו",
+                                          "full_name":  "שי וינרב",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  71189,
+                                          "first_name":  "אילון",
+                                          "last_name":  "גשרי",
+                                          "image":  "",
+                                          "schedule_user_id":  168941904,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  10937610,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ג",
+                                          "full_name_shorten":  "אילון ג",
+                                          "full_name":  "אילון גשרי",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  3692779,
+                                          "first_name":  "שקדיאל",
+                                          "last_name":  "אטגדי",
+                                          "image":  "",
+                                          "schedule_user_id":  168941920,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15800018,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "א",
+                                          "full_name_shorten":  "שקדיאל א",
+                                          "full_name":  "שקדיאל אטגדי",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  5131196,
+                                          "first_name":  "Shahar",
+                                          "last_name":  "Cohen",
+                                          "image":  "",
+                                          "schedule_user_id":  169581973,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15859631,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "C",
+                                          "full_name_shorten":  "Shahar C",
+                                          "full_name":  "Shahar Cohen",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  8700897,
+                                          "first_name":  "Aira",
+                                          "last_name":  "Javier",
+                                          "image":  "",
+                                          "schedule_user_id":  169582013,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15859699,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "J",
+                                          "full_name_shorten":  "Aira J",
+                                          "full_name":  "Aira Javier",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  3926916,
+                                          "first_name":  "אוהד",
+                                          "last_name":  "סגל",
+                                          "image":  "",
+                                          "schedule_user_id":  169587234,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  11746802,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ס",
+                                          "full_name_shorten":  "אוהד ס",
+                                          "full_name":  "אוהד סגל",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  4697769,
+                                          "first_name":  "איל",
+                                          "last_name":  "רוזנצויג",
+                                          "image":  "",
+                                          "schedule_user_id":  169589119,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  10957078,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ר",
+                                          "full_name_shorten":  "איל ר",
+                                          "full_name":  "איל רוזנצויג",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  8626894,
+                                          "first_name":  "יובל",
+                                          "last_name":  "סמואל",
+                                          "image":  "",
+                                          "schedule_user_id":  169589565,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15223960,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ס",
+                                          "full_name_shorten":  "יובל ס",
+                                          "full_name":  "יובל סמואל",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  5665830,
+                                          "first_name":  "Jordan",
+                                          "last_name":  "Nicholaeff",
+                                          "image":  "",
+                                          "schedule_user_id":  169590348,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  15448932,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "N",
+                                          "full_name_shorten":  "Jordan N",
+                                          "full_name":  "Jordan Nicholaeff",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  7769090,
+                                          "first_name":  "אהד",
+                                          "last_name":  "דביש",
+                                          "image":  "",
+                                          "schedule_user_id":  169590960,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13057562,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "ד",
+                                          "full_name_shorten":  "אהד ד",
+                                          "full_name":  "אהד דביש",
+                                          "is_user":  true
+                                      },
+                                      {
+                                          "id":  247474,
+                                          "first_name":  "Oz",
+                                          "last_name":  "A",
+                                          "image":  "",
+                                          "schedule_user_id":  169591839,
+                                          "late_cancellation":  0,
+                                          "spot":  null,
+                                          "membership_user_fk":  13705578,
+                                          "checked_in":  0,
+                                          "laravel_through_key":  50207320,
+                                          "last_name_shorten":  "A",
+                                          "full_name_shorten":  "Oz A",
+                                          "full_name":  "Oz A",
+                                          "is_user":  true
+                                      }
+                                  ],
+                 "stand_by":  0,
+                 "free":  0,
+                 "registered":  16,
+                 "booking_option":  "cancelScheduleUser",
+                 "is_swappable_schedule":  false,
+                 "reschedule":  false,
+                 "day_of_week":  4,
+                 "date_time":  {
+                                   "date":  "2026-05-28 08:00:00",
+                                   "timezone":  "Asia/Jerusalem"
+                               },
+                 "end_date_time":  {
+                                       "date":  "2026-05-28 09:00:00",
+                                       "timezone":  "Asia/Jerusalem"
+                                   },
+                 "box":  {
+                             "id":  59,
+                             "name":  "CrossFit White City",
+                             "has_regular_clients":  0,
+                             "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_200,w_200,f_auto,q_auto/h0tllkam00g2aro9ilk5.jpg",
+                             "phone":  "0587800466"
+                         },
+                 "box_categories":  {
+                                        "id":  40068,
+                                        "name":  "HYROX",
+                                        "bio":  null,
+                                        "category_color":  "#E4FCB5",
+                                        "length":  60,
+                                        "price":  null,
+                                        "type":  1,
+                                        "color_name":  "cat-color-5",
+                                        "membership_types":  [
+
+                                                             ],
+                                        "box_categories_groups":  [
+                                                                      {
+                                                                          "id":  429,
+                                                                          "name":  "אימונים קבוצתיים",
+                                                                          "boxes_id":  59,
+                                                                          "active":  1,
+                                                                          "created_at":  "2024-06-03T06:22:39.000000Z",
+                                                                          "updated_at":  "2025-01-05T05:50:57.000000Z",
+                                                                          "deleted_at":  null,
+                                                                          "laravel_through_key":  40068
+                                                                      }
+                                                                  ],
+                                        "redirect_prop":  null,
+                                        "category_type":  {
+                                                              "id":  1,
+                                                              "name":  "class",
+                                                              "created_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "updated_at":  "2021-10-06T11:20:16.000000Z",
+                                                              "deleted_at":  null
+                                                          }
+                                    },
+                 "locations_box":  {
+                                       "id":  48,
+                                       "location":  "אימונים קבוצתיים- וייט סיטי",
+                                       "logo":  null,
+                                       "date_format":  "DD/MM/YYYY",
+                                       "time_format":  "HH:mm",
+                                       "timezone":  "Asia/Jerusalem",
+                                       "debit_block":  1,
+                                       "medical_cert":  0,
+                                       "without_waiver":  1,
+                                       "epidemic_statement":  0,
+                                       "min_age_block":  null,
+                                       "gender_block":  null,
+                                       "address":  "Derech Menachem Begin 125, Tel Aviv-Yafo",
+                                       "currency_symbol":  "",
+                                       "has_shop":  true
+                                   },
+                 "series":  {
+                                "id":  394478,
+                                "series_name":  "אימון ניסיון מרוכז,חמישי,18:30",
+                                "box_fk":  59,
+                                "locations_box_fk":  48,
+                                "spaces_id":  null,
+                                "season_id":  null,
+                                "box_category_fk":  40068,
+                                "start_date":  "2024-08-08",
+                                "end_date":  null,
+                                "price":  null,
+                                "start_time":  "08:00:00",
+                                "end_time":  "09:00:00",
+                                "status":  "active",
+                                "day":  "day-5",
+                                "max_users":  16,
+                                "min_users":  0,
+                                "has_spots":  0,
+                                "cancel_limit_min":  0,
+                                "coach_fk":  4726621,
+                                "second_coach_fk":  null,
+                                "live_link":  null,
+                                "enable_registration_time":  48,
+                                "block_registration_time":  0,
+                                "disable_cancellation_time":  1,
+                                "enable_late_cancellation":  1,
+                                "transparent":  0,
+                                "register_group_member":  0,
+                                "allow_mid_booking":  0,
+                                "created_at":  "2024-07-22T12:05:34.000000Z",
+                                "updated_at":  "2025-10-26T12:48:55.000000Z",
+                                "deleted_at":  null,
+                                "remaining_slots":  96,
+                                "custom_field_value":  [
+
+                                                       ],
+                                "membership_types":  [
+
+                                                     ]
+                            },
+                 "disable_pages_app":  [
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "logBook",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "sidebar",
+                                               "section_name":  "wod",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "schedule",
+                                               "section_name":  "standBy",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "registerWithoutMembership",
+                                               "laravel_through_key":  48
+                                           },
+                                           {
+                                               "locations_box_id":  48,
+                                               "area":  "site",
+                                               "section_name":  "allowMTStartDateSelection",
+                                               "laravel_through_key":  48
+                                           }
+                                       ],
+                 "spaces":  null,
+                 "custom_field_value":  [
+
+                                        ],
+                 "schedule_user":  [
+                                       {
+                                           "id":  71189,
+                                           "first_name":  "אילון",
+                                           "last_name":  "גשרי",
+                                           "image":  "",
+                                           "schedule_user_id":  168941904,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  10937610,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ג",
+                                           "full_name_shorten":  "אילון ג",
+                                           "full_name":  "אילון גשרי",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  3692779,
+                                           "first_name":  "שקדיאל",
+                                           "last_name":  "אטגדי",
+                                           "image":  "",
+                                           "schedule_user_id":  168941920,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15800018,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "א",
+                                           "full_name_shorten":  "שקדיאל א",
+                                           "full_name":  "שקדיאל אטגדי",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  2285656,
+                                           "first_name":  "ולריה",
+                                           "last_name":  "זליקוביץ\u0027",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/ngiygyffzkpjqyh0vvph.jpg",
+                                           "schedule_user_id":  169581907,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15279267,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ז",
+                                           "full_name_shorten":  "ולריה ז",
+                                           "full_name":  "ולריה זליקוביץ\u0027",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  5131196,
+                                           "first_name":  "Shahar",
+                                           "last_name":  "Cohen",
+                                           "image":  "",
+                                           "schedule_user_id":  169581973,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15859631,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "C",
+                                           "full_name_shorten":  "Shahar C",
+                                           "full_name":  "Shahar Cohen",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  8700897,
+                                           "first_name":  "Aira",
+                                           "last_name":  "Javier",
+                                           "image":  "",
+                                           "schedule_user_id":  169582013,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15859699,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "J",
+                                           "full_name_shorten":  "Aira J",
+                                           "full_name":  "Aira Javier",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  7964386,
+                                           "first_name":  "אורי",
+                                           "last_name":  "חיימוביץ",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/inglm1qnw67kkfhcyprd.jpg",
+                                           "schedule_user_id":  169582212,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13510107,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ח",
+                                           "full_name_shorten":  "אורי ח",
+                                           "full_name":  "אורי חיימוביץ",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  7304410,
+                                           "first_name":  "שחר",
+                                           "last_name":  "ג",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/muj3wvfrtpbzoo5vagki.jpg",
+                                           "schedule_user_id":  169582528,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  12189771,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ג",
+                                           "full_name_shorten":  "שחר ג",
+                                           "full_name":  "שחר ג",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  706651,
+                                           "first_name":  "לינוי",
+                                           "last_name":  "אקוני",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/xmsj30uzcbbadfgbdawv.jpg",
+                                           "schedule_user_id":  169582799,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  14679420,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "א",
+                                           "full_name_shorten":  "לינוי א",
+                                           "full_name":  "לינוי אקוני",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  7267008,
+                                           "first_name":  "פבריס",
+                                           "last_name":  "מ.",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/hrr4azremtqigr7zmwrx.jpg",
+                                           "schedule_user_id":  169585456,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13186291,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "מ",
+                                           "full_name_shorten":  "פבריס מ",
+                                           "full_name":  "פבריס מ.",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  3926916,
+                                           "first_name":  "אוהד",
+                                           "last_name":  "סגל",
+                                           "image":  "",
+                                           "schedule_user_id":  169587234,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  11746802,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ס",
+                                           "full_name_shorten":  "אוהד ס",
+                                           "full_name":  "אוהד סגל",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  3268116,
+                                           "first_name":  "שי",
+                                           "last_name":  "וינרב",
+                                           "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/wfu0n7fanngpidmauvln.jpg",
+                                           "schedule_user_id":  169588585,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  4710736,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ו",
+                                           "full_name_shorten":  "שי ו",
+                                           "full_name":  "שי וינרב",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  4697769,
+                                           "first_name":  "איל",
+                                           "last_name":  "רוזנצויג",
+                                           "image":  "",
+                                           "schedule_user_id":  169589119,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  10957078,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ר",
+                                           "full_name_shorten":  "איל ר",
+                                           "full_name":  "איל רוזנצויג",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  8626894,
+                                           "first_name":  "יובל",
+                                           "last_name":  "סמואל",
+                                           "image":  "",
+                                           "schedule_user_id":  169589565,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15223960,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ס",
+                                           "full_name_shorten":  "יובל ס",
+                                           "full_name":  "יובל סמואל",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  5665830,
+                                           "first_name":  "Jordan",
+                                           "last_name":  "Nicholaeff",
+                                           "image":  "",
+                                           "schedule_user_id":  169590348,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  15448932,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "N",
+                                           "full_name_shorten":  "Jordan N",
+                                           "full_name":  "Jordan Nicholaeff",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  7769090,
+                                           "first_name":  "אהד",
+                                           "last_name":  "דביש",
+                                           "image":  "",
+                                           "schedule_user_id":  169590960,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13057562,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "ד",
+                                           "full_name_shorten":  "אהד ד",
+                                           "full_name":  "אהד דביש",
+                                           "is_user":  true
+                                       },
+                                       {
+                                           "id":  247474,
+                                           "first_name":  "Oz",
+                                           "last_name":  "A",
+                                           "image":  "",
+                                           "schedule_user_id":  169591839,
+                                           "late_cancellation":  0,
+                                           "spot":  null,
+                                           "membership_user_fk":  13705578,
+                                           "checked_in":  0,
+                                           "laravel_through_key":  50207320,
+                                           "last_name_shorten":  "A",
+                                           "full_name_shorten":  "Oz A",
+                                           "full_name":  "Oz A",
+                                           "is_user":  true
+                                       }
+                                   ],
+                 "schedule_stand_by":  [
+
+                                       ],
+                 "coach":  {
+                               "id":  4726621,
+                               "bio":  null,
+                               "image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/wxcesdgqi5nhgmh4hbfb.jpg",
+                               "user_fk":  4726621,
+                               "first_name":  "קאלי",
+                               "last_name":  "ארגוב",
+                               "box_fk":  59,
+                               "image_public_id_cloudinary":  "wxcesdgqi5nhgmh4hbfb",
+                               "cloudinary_image":  "https://res.cloudinary.com/arbox/image/upload/c_fit,h_500,w_500,f_auto,q_auto/wxcesdgqi5nhgmh4hbfb.jpg",
+                               "last_name_shorten":  "א",
+                               "full_name_shorten":  "קאלי א",
+                               "full_name":  "קאלי ארגוב",
+                               "is_user":  true
+                           },
+                 "second_coach":  null
+             }
+}
+
+[2026-05-26 09:25:55.952] BOOKING CONFIRMED for 2026-05-28 08:00 -- HYROX
+[2026-06-01 10:07:41.890] ==================================================
+[2026-06-01 10:07:41.974] Target class: 2026-06-03 08:00 Wednesday
+[2026-06-01 10:07:41.978] Window opens: 2026-06-01 08:00:00.000
+[2026-06-01 10:07:41.983] Category filter: 'W.O.D Hall A'
+[2026-06-01 10:07:41.989] Now:          2026-06-01 10:07:41.989
+[2026-06-01 10:07:41.996] DryRun:       False
+[2026-06-01 10:07:42.001] Step 1: login...
+[2026-06-01 10:07:42.509]   logged in (token len 388)
+[2026-06-01 10:07:42.515] Step 2: fetching schedule for 2026-06-03...
+[2026-06-01 10:07:43.363]   got 20 classes for 2026-06-03
+[2026-06-01 10:07:43.424] Target found: id=50416736  08:00  W.O.D Hall A  coach=שקד אטדגי  free=-1
+[2026-06-01 10:07:43.447] Window already open (or past) -- firing immediately.
+[2026-06-01 10:07:43.452] Step 5: POST /scheduleUser/insert ...
+[2026-06-01 10:07:43.641] Attempt 1 HTTP 516 : {"statusCode":516,"error":{"message":"Schedule Is Full","messageToUser":"Schedule is full,refresh the schedule page by dragging it down and subscribe to the waiting list","code":516},"data":null}
+[2026-06-01 10:07:43.992] Attempt 2 HTTP 516 : {"statusCode":516,"error":{"message":"Schedule Is Full","messageToUser":"Schedule is full,refresh the schedule page by dragging it down and subscribe to the waiting list","code":516},"data":null}
+[2026-06-01 10:07:44.410] Attempt 3 HTTP 516 : {"statusCode":516,"error":{"message":"Schedule Is Full","messageToUser":"Schedule is full,refresh the schedule page by dragging it down and subscribe to the waiting list","code":516},"data":null}
+[2026-06-01 10:07:44.744] Attempt 4 HTTP 516 : {"statusCode":516,"error":{"message":"Schedule Is Full","messageToUser":"Schedule is full,refresh the schedule page by dragging it down and subscribe to the waiting list","code":516},"data":null}
+[2026-06-01 10:07:44.978] Attempt 5 HTTP 429 : 
+[2026-06-01 10:07:45.212] Attempt 6 HTTP 429 : 
+[2026-06-01 10:07:45.438] Attempt 7 HTTP 429 : 
+[2026-06-01 10:07:45.658] Attempt 8 HTTP 429 : 
+[2026-06-01 10:07:45.878] BOOKING FAILED after 8 attempts.
+[2026-09-09 16:10:50.724] ==================================================
+[2026-09-09 16:10:50.725] Target class: 2026-09-15 08:00 Tuesday
+[2026-09-09 16:10:50.726] Window opens: 2026-09-13 08:00:00 (48h before class)
+[2026-09-09 16:10:50.726] Now:          2026-09-09 16:10:50
+[2026-09-09 16:10:50.727] DryRun:       False
+[2026-09-09 16:10:50.727] Step 1: login...
+[2026-09-09 16:10:50.728]   logged in (token len 3)
+[2026-09-09 16:10:50.728] Step 2: fetching schedule for 2026-09-15...
+[2026-09-09 16:10:50.728]   got 1 classes for 2026-09-15
+[2026-09-09 16:10:50.729] Target found: id=123  08:00:00  W.O.D Hall A  coach=Coach  free=-1
+[2026-09-09 16:10:50.731] Step 5: POST /scheduleUser/insert (up to 0s, ~100.0 req/s) ...
+[2026-09-09 16:10:50.731] Attempt 1: class is FULL (HTTP 516) - going straight to the waiting list.
+[2026-09-09 16:10:50.731] Step 6: joining the waiting list ...
+[2026-09-09 16:10:50.732]   waiting list JOINED via /scheduleUser/insertToWaitingList
+[2026-09-09 16:10:50.732] WAITLISTED for 2026-09-15 08:00 - W.O.D Hall A
+[2026-09-09 16:10:50.733] ==================================================
+[2026-09-09 16:10:50.733] Target class: 2026-09-15 08:00 Tuesday
+[2026-09-09 16:10:50.734] Window opens: 2026-09-13 08:00:00 (48h before class)
+[2026-09-09 16:10:50.735] Now:          2026-09-09 16:10:50
+[2026-09-09 16:10:50.735] DryRun:       False
+[2026-09-09 16:10:50.736] Step 1: login...
+[2026-09-09 16:10:50.736]   logged in (token len 3)
+[2026-09-09 16:10:50.736] Step 2: fetching schedule for 2026-09-15...
+[2026-09-09 16:10:50.737]   got 1 classes for 2026-09-15
+[2026-09-09 16:10:50.737] Target found: id=123  08:00:00  W.O.D Hall A  coach=Coach  free=-1
+[2026-09-09 16:10:50.738] Step 5: POST /scheduleUser/insert (up to 0s, ~100.0 req/s) ...
+[2026-09-09 16:10:50.738] Attempt 1 HTTP 500 : server hiccup
+[2026-09-09 16:10:50.749] Attempt 2 SUCCESS at 16:10:50.749
+[2026-09-09 16:10:50.750] BOOKING CONFIRMED for 2026-09-15 08:00 - W.O.D Hall A
+[2026-09-09 16:10:50.751] ==================================================
+[2026-09-09 16:10:50.752] Target class: 2026-09-15 08:00 Tuesday
+[2026-09-09 16:10:50.753] Window opens: 2026-09-13 08:00:00 (48h before class)
+[2026-09-09 16:10:50.753] Now:          2026-09-09 16:10:50
+[2026-09-09 16:10:50.754] DryRun:       False
+[2026-09-09 16:10:50.756] Step 1: login...
+[2026-09-09 16:10:50.756]   logged in (token len 3)
+[2026-09-09 16:10:50.757] Step 2: fetching schedule for 2026-09-15...
+[2026-09-09 16:10:50.757]   got 1 classes for 2026-09-15
+[2026-09-09 16:10:50.758] Target found: id=123  08:00:00  W.O.D Hall A  coach=Coach  free=-1
+[2026-09-09 16:10:50.758] Step 5: POST /scheduleUser/insert (up to 0s, ~100.0 req/s) ...
+[2026-09-09 16:10:50.759] Attempt 1: rate limited - backing off 0.01s
+[2026-09-09 16:10:50.770] Attempt 2: rate limited - backing off 0.01s
+[2026-09-09 16:10:50.781] Attempt 3 SUCCESS at 16:10:50.781
+[2026-09-09 16:10:50.784] BOOKING CONFIRMED for 2026-09-15 08:00 - W.O.D Hall A
+[2026-09-09 16:10:50.785] ==================================================
+[2026-09-09 16:10:50.785] Target class: 2026-09-15 08:00 Tuesday
+[2026-09-09 16:10:50.786] Window opens: 2026-09-13 08:00:00 (48h before class)
+[2026-09-09 16:10:50.786] Now:          2026-09-09 16:10:50
+[2026-09-09 16:10:50.786] DryRun:       False
+[2026-09-09 16:10:50.787] Step 1: login...
+[2026-09-09 16:10:50.787]   logged in (token len 3)
+[2026-09-09 16:10:50.788] Step 2: fetching schedule for 2026-09-15...
+[2026-09-09 16:10:50.788]   got 1 classes for 2026-09-15
+[2026-09-09 16:10:50.789] Target found: id=123  08:00:00  W.O.D Hall A  coach=Coach  free=-1
+[2026-09-09 16:10:50.789] Step 5: POST /scheduleUser/insert (up to 0s, ~100.0 req/s) ...
+[2026-09-09 16:10:50.790] Attempt 1: class is FULL (HTTP 516) - going straight to the waiting list.
+[2026-09-09 16:10:50.791] Step 6: joining the waiting list ...
+[2026-09-09 16:10:50.791]   waiting list: /scheduleUser/insertToWaitingList -> HTTP 404 Not Found
+[2026-09-09 16:10:50.792]   waiting list: /scheduleUser/insertWaitingList -> HTTP 404 Not Found
+[2026-09-09 16:10:50.792]   waiting list: /scheduleUser/waitingList -> HTTP 404 Not Found
+[2026-09-09 16:10:50.792]   waiting list: /waitingList/insert -> HTTP 404 Not Found
+[2026-09-09 16:10:50.793]   waiting list: /scheduleUser/standby -> HTTP 404 Not Found
+[2026-09-09 16:10:50.793]   waiting list: /scheduleUser/insert -> HTTP 404 Not Found
+[2026-09-09 16:10:50.794] Could not book the class and could not join the waiting list.
+[2026-09-09 16:10:50.794] None of the candidate waiting-list endpoints was accepted - the real one needs to be captured from the app (see SETUP.md).
+[2026-09-09 16:10:50.795] ==================================================
+[2026-09-09 16:10:50.795] Target class: 2026-09-15 08:00 Tuesday
+[2026-09-09 16:10:50.796] Window opens: 2026-09-13 08:00:00 (48h before class)
+[2026-09-09 16:10:50.796] Now:          2026-09-09 16:10:50
+[2026-09-09 16:10:50.797] DryRun:       False
+[2026-09-09 16:10:50.797] Step 1: login...
+[2026-09-09 16:10:50.798]   logged in (token len 3)
+[2026-09-09 16:10:50.798] Step 2: fetching schedule for 2026-09-15...
+[2026-09-09 16:10:50.798]   got 1 classes for 2026-09-15
+[2026-09-09 16:10:50.799] Target found: id=123  08:00:00  W.O.D Hall A  coach=Coach  free=-1
+[2026-09-09 16:10:50.799] Step 5: POST /scheduleUser/insert (up to 0s, ~100.0 req/s) ...
+[2026-09-09 16:10:50.800] Attempt 1: class is FULL (HTTP 516) - going straight to the waiting list.
+[2026-09-09 16:10:50.801] Not booked after 1 attempt(s), and --no-waitlist was given.
+[2026-09-09 16:10:50.801] ==================================================
+[2026-09-09 16:10:50.802] Target class: 2026-09-15 08:00 Tuesday
+[2026-09-09 16:10:50.802] Window opens: 2026-09-13 08:00:00 (48h before class)
+[2026-09-09 16:10:50.803] Now:          2026-09-09 16:10:50
+[2026-09-09 16:10:50.803] DryRun:       False
+[2026-09-09 16:10:50.804] Step 1: login...
+[2026-09-09 16:10:50.804]   logged in (token len 3)
+[2026-09-09 16:10:50.804] Step 2: fetching schedule for 2026-09-15...
+[2026-09-09 16:10:50.805]   got 1 classes for 2026-09-15
+[2026-09-09 16:10:50.805] Target found: id=123  08:00:00  W.O.D Hall A  coach=Coach  free=-1
+[2026-09-09 16:10:50.806] Step 5: POST /scheduleUser/insert (up to 0s, ~100.0 req/s) ...
+[2026-09-09 16:10:50.806] Attempt 1 HTTP 401 : unauthorized
+[2026-09-09 16:10:50.807] Permanent failure - not retrying.
+[2026-09-09 16:10:50.807] BOOKING FAILED - the API rejected the request outright.
